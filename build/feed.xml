@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gary.mcad.am</title>
-    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://localhost:8080</link>
+    <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
     <pubDate>Fri, 27 Nov 2015 22:48:56 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>Devember as a conduit for escaping procrastination</title>
-      <link>http://localhost:8080/articles/devember/</link>
+      <link>http://gary.mcad.am/articles/devember/</link>
       <pubDate>Fri, 27 Nov 2015 22:48:56 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/devember/</guid>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember/</guid>
       <author></author>
       <description>&lt;p&gt;So, I’ll be doing &lt;a href=&quot;http://devember.org/&quot;&gt;#Devember&lt;/a&gt; this year for the first time. What’s Devember?&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -65,9 +65,9 @@ I’m anticipating there’ll be some days where doing an hour of programming wi
     </item>
     <item>
       <title>Reddit Live Comments Chrome Extension</title>
-      <link>http://localhost:8080/articles/chrome-reddit-live-comments/</link>
+      <link>http://gary.mcad.am/articles/chrome-reddit-live-comments/</link>
       <pubDate>Sat, 13 Jun 2015 14:12:01 +0100</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/chrome-reddit-live-comments/</guid>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/chrome-reddit-live-comments/</guid>
       <author></author>
       <description>&lt;p&gt;Update comment threads on reddit automatically with this Chrome Extension.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
