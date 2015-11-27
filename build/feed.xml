@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gary.mcad.am</title>
+    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost:8080</link>
+    <description>I paid for this domain, I might aswell use it</description>
+    <pubDate>Fri, 27 Nov 2015 22:48:56 +0000</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Devember as a conduit for escaping procrastination</title>
+      <link>http://localhost:8080/articles/devember/</link>
+      <pubDate>Fri, 27 Nov 2015 22:48:56 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/devember/</guid>
+      <author></author>
+      <description>&lt;p&gt;So, I’ll be doing &lt;a href=&quot;http://devember.org/&quot;&gt;#Devember&lt;/a&gt; this year for the first time. What’s Devember?&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Devember is a challenge you take up. It is an excuse for programming, for learning to code and for sharing it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The rules are simple: &lt;strong&gt;write code on a project every day in December.&lt;/strong&gt; There’s some extra bits about it being
+publicly accessible and doing a daily dev blog &amp;ndash; I’ll do my best to adhere to these but honestly I’ll
+be happy to simply write a commit every day.&lt;/p&gt;
+&lt;p&gt;My personal goals for Devember are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Explore some technologies on my list that I’ve not given myself time to&lt;/li&gt;
+&lt;li&gt;Force me to continue work on a project I’ve been meaning to do in my spare time for a while&lt;/li&gt;
+&lt;li&gt;Enable me to write about programming on my blog more often&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;the-project&quot;&gt;The Project&lt;/h2&gt;
+&lt;p&gt;The project is a toddler-friendly YouTube app I’ve had on my list for a while. It’s called &lt;strong&gt;Bloon&lt;/strong&gt; and it
+looks&amp;ndash;or will look&amp;ndash;like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/devember/bloon.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The idea is that parents create playlists for their toddler to browse in a child-friendly user interface
+with minimal clutter and simple interface elements. They “pop” a baloon of their favourite character
+and off they go!&lt;/p&gt;
+&lt;p&gt;The goal is ultimately to release this as a native app on iOS and Android, but for the first iteration
+I’ll be writing it as an in-browser only experience.&lt;/p&gt;
+&lt;h2 id=&quot;the-methodology&quot;&gt;The Methodology&lt;/h2&gt;
+&lt;p&gt;I don’t anticipate having anything near a working prototype by the end of December, but I hope I’ll to be
+most of the way there for my first version.&lt;/p&gt;
+&lt;p&gt;I’ll be writing the web version in PHP using &lt;a href=&quot;http://lumen.laravel.com/&quot;&gt;Lumen&lt;/a&gt; to serve the API,
+with a MySQL database and &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; to handle handle rendering of the UI.&lt;/p&gt;
+&lt;p&gt;I’m familiar with Laravel and MySQL but not Lumen or React with only minimal experience. So this will be
+a great opportunity to explore these areas.&lt;/p&gt;
+&lt;p&gt;The development stack will look something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Server Infrastructure:&lt;/strong&gt; Ubuntu + Vagrant + nginx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backend:&lt;/strong&gt; PHP + Lumen + MySQL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Frontend:&lt;/strong&gt; Twitter Bootstrap + LESS + React&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;follow-my-progress&quot;&gt;Follow My Progress&lt;/h2&gt;
+&lt;p&gt;I’ll commit my work to &lt;a href=&quot;https://github.com/gpmcadam&quot;&gt;github&lt;/a&gt; and share information
+about my progress as I go on this blog and give a brief summary in the New Year of how everything went.&lt;/p&gt;
+&lt;p&gt;I’ve also started &lt;a href=&quot;https://trello.com/b/E0sJf6x3/bloon-devember&quot;&gt;a board on Trello&lt;/a&gt; to track my progress.&lt;/p&gt;
+&lt;p&gt;I have a busy schedule this month, my guess is December is the most social month, even for hermits like me! So
+I’m anticipating there’ll be some days where doing an hour of programming will be … difficult. I’ll share that, too.&lt;/p&gt;
+&lt;p&gt;You can track my progress here, and in byte-sized snippets on &lt;a href=&quot;https://twitter.com/gpmcadam&quot;&gt;Twitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Also, here’s the silly contract you’re meant to stick on your announcement:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I, Gary McAdam, will participate to the next Devember. My Devember will be Bloon (see above). I promise I will program for my Devember for at least an hour, every day of the next December. I will also write a daily public devlog and will make the produced code publicly available on the internet. No matter what, I will keep my promise. &lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    <item>
+      <title>Reddit Live Comments Chrome Extension</title>
+      <link>http://localhost:8080/articles/chrome-reddit-live-comments/</link>
+      <pubDate>Sat, 13 Jun 2015 14:12:01 +0100</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/chrome-reddit-live-comments/</guid>
+      <author></author>
+      <description>&lt;p&gt;Update comment threads on reddit automatically with this Chrome Extension.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/fYxwrbAjFoDjGxFkDOacpP8bkG7SGjIm39rMjILryLLnswsj3CEhikRhabxLFIJEqcPjrJ4VDA=s640-h400-e365-rw&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/reddit-live/gfmgldfmppamhojkggjlonpboiobnbpe?hl=en-GB&amp;amp;gl=GB&quot;&gt;View the Extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gpmcadam/chrome-reddit-live-comments&quot;&gt;View the Source Code on github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;how-to-install&quot;&gt;How to Install&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the extension&lt;/li&gt;
+&lt;li&gt;Load a comment thread on &lt;a href=&quot;https://reddit.com&quot;&gt;&lt;em&gt;reddit&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;From the &lt;strong&gt;‘Sort By’&lt;/strong&gt; menu, sort comments by &lt;strong&gt;‘live’&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That’s it!&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
