@@ -16,7 +16,7 @@ to compensate?<span class="more"></span>
 That's how I feel right now, anyway.
 
 I'm a huge fan of ReactJS and I've been desperate to use it on a project
-for ages. Unfortunately the ReactJS and its community is moving so
+for ages. Unfortunately ReactJS and its community are moving so
 quickly that they haven't stopped to document things properly
 and because of how quick it's changing, any community guides are already outdated.
 
