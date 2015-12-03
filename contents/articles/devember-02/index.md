@@ -15,7 +15,7 @@ to compensate?<span class="more"></span>
 
 That's how I feel right now, anyway.
 
-I'm a huge fan of ReactJS and I've been desparate to use it on a project
+I'm a huge fan of ReactJS and I've been desperate to use it on a project
 for ages. Unfortunately the ReactJS and its community is moving so
 quickly that they haven't stopped to document things properly
 and because of how quick it's changing, any community guides are already outdated.
@@ -27,10 +27,10 @@ what the best combination is &ndash; nor that any of the above is even required
 suggested method of `babel-cli`?!)
 
 I've finally got everything running with the help of a friendly user in the
-React IRC channel. But I'm a little disuaded already.
+React IRC channel. But I'm a little dissuaded already.
 
 Sometimes there's a comfort in being given a strict set of tools, and I wonder
-if React needs time to settle on a way of precompilation. Right now it's a bit
+if React needs time to settle on a way of pre-compilation. Right now it's a bit
 of a minefield.
 
 Anyway after many hours of frustration, I've ended up with a combination of:
@@ -53,7 +53,7 @@ I'll distract myself by implementing some of the UI instead.
 
  - At the start of this project I decided to test out Atom. I had previously
    been using Sublime Text 3 (which I use full time otherwise). My summary:
-   it's a great idea and an amazing achivement, but I'm not sure it's ready
+   it's a great idea and an amazing achievement, but I'm not sure it's ready
    to be used generally. I'll revisit this editor in the future, but even for
    this small side project, it's not up to the task.
    ![](bye-bye-atom.jpg)

@@ -22,7 +22,7 @@ to compensate?&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;That’s how I feel right now, anyway.&lt;/p&gt;
-&lt;p&gt;I’m a huge fan of ReactJS and I’ve been desparate to use it on a project
+&lt;p&gt;I’m a huge fan of ReactJS and I’ve been desperate to use it on a project
 for ages. Unfortunately the ReactJS and its community is moving so
 quickly that they haven’t stopped to document things properly
 and because of how quick it’s changing, any community guides are already outdated.&lt;/p&gt;
@@ -32,9 +32,9 @@ what the best combination is &amp;ndash; nor that any of the above is even requi
 (seriously why is it so hard to get the default Hello World running using the
 suggested method of &lt;code&gt;babel-cli&lt;/code&gt;?!)&lt;/p&gt;
 &lt;p&gt;I’ve finally got everything running with the help of a friendly user in the
-React IRC channel. But I’m a little disuaded already.&lt;/p&gt;
+React IRC channel. But I’m a little dissuaded already.&lt;/p&gt;
 &lt;p&gt;Sometimes there’s a comfort in being given a strict set of tools, and I wonder
-if React needs time to settle on a way of precompilation. Right now it’s a bit
+if React needs time to settle on a way of pre-compilation. Right now it’s a bit
 of a minefield.&lt;/p&gt;
 &lt;p&gt;Anyway after many hours of frustration, I’ve ended up with a combination of:&lt;/p&gt;
 &lt;ul&gt;
@@ -54,7 +54,7 @@ I’ll distract myself by implementing some of the UI instead.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;At the start of this project I decided to test out Atom. I had previously
 been using Sublime Text 3 (which I use full time otherwise). My summary:
-it’s a great idea and an amazing achivement, but I’m not sure it’s ready
+it’s a great idea and an amazing achievement, but I’m not sure it’s ready
 to be used generally. I’ll revisit this editor in the future, but even for
 this small side project, it’s not up to the task.
 &lt;img src=&quot;/articles/devember-02/bye-bye-atom.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
