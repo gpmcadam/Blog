@@ -5,9 +5,98 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Fri, 27 Nov 2015 22:48:56 +0000</pubDate>
+    <pubDate>Thu, 03 Dec 2015 01:47:39 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 2</title>
+      <link>http://gary.mcad.am/articles/devember-02/</link>
+      <pubDate>Thu, 03 Dec 2015 01:47:39 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-02/</guid>
+      <author></author>
+      <description>&lt;p&gt;Day 2, and I’ve spent 4 hours this evening just fighting to get
+ReactJS to compile to ES5. Maybe I can just skip the next 3 days
+to compensate?&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div style=&quot;width: 200px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+    &lt;img src=&quot;/articles/devember-02/fngggg.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That’s how I feel right now, anyway.&lt;/p&gt;
+&lt;p&gt;I’m a huge fan of ReactJS and I’ve been desparate to use it on a project
+for ages. Unfortunately the ReactJS and its community is moving so
+quickly that they haven’t stopped to document things properly
+and because of how quick it’s changing, any community guides are already outdated.&lt;/p&gt;
+&lt;p&gt;Tonight consisted of swapping and hacking between various combinations of
+grunt, gulp, webpack, browserify, babel and react. I’m still not sure
+what the best combination is &amp;ndash; nor that any of the above is even required
+(seriously why is it so hard to get the default Hello World running using the
+suggested method of &lt;code&gt;babel-cli&lt;/code&gt;?!)&lt;/p&gt;
+&lt;p&gt;I’ve finally got everything running with the help of a friendly user in the
+React IRC channel. But I’m a little disuaded already.&lt;/p&gt;
+&lt;p&gt;Sometimes there’s a comfort in being given a strict set of tools, and I wonder
+if React needs time to settle on a way of precompilation. Right now it’s a bit
+of a minefield.&lt;/p&gt;
+&lt;p&gt;Anyway after many hours of frustration, I’ve ended up with a combination of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gulp&lt;/li&gt;
+&lt;li&gt;babel&lt;/li&gt;
+&lt;li&gt;babelify&lt;/li&gt;
+&lt;li&gt;browserify&lt;/li&gt;
+&lt;li&gt;react (+ react-dom)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’m still getting to grips with what everything is, but it’s a real shame
+to spend the evening bashing your head against the wall just trying to
+get some JavaScript to pre-compile.&lt;/p&gt;
+&lt;p&gt;For now, it’s rendering. So while I have 0 commits, I’m happy enough that
+tomorrow at least I’ll get to write a line of code (hopefully!) or maybe
+I’ll distract myself by implementing some of the UI instead.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;At the start of this project I decided to test out Atom. I had previously
+been using Sublime Text 3 (which I use full time otherwise). My summary:
+it’s a great idea and an amazing achivement, but I’m not sure it’s ready
+to be used generally. I’ll revisit this editor in the future, but even for
+this small side project, it’s not up to the task.
+&lt;img src=&quot;/articles/devember-02/bye-bye-atom.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent 4h&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 1</title>
+      <link>http://gary.mcad.am/articles/devember-01/</link>
+      <pubDate>Tue, 01 Dec 2015 23:03:56 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-01/</guid>
+      <author></author>
+      <description>&lt;p&gt;Day 1! I’ve managed to squeeze in 1 hour of development time this
+evening&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;, in which I’ve completed the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setup the Lumen framework&lt;/li&gt;
+&lt;li&gt;Configure Vagrant with Ubuntu and nginx&lt;/li&gt;
+&lt;li&gt;Write and import the first set of database migrations&lt;/li&gt;
+&lt;li&gt;I’ve now set up
+&lt;a href=&quot;https://github.com/gpmcadam/bloon&quot;&gt;a public Github repository&lt;/a&gt;
+to track the project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fairly productive hour; looking forward to working on seeding the database
+and hopefully starting on the UI in the next couple of days. I’m eager to
+try out Browsersync, since seeing
+&lt;a href=&quot;https://www.youtube.com/watch?v=heNWfzc7ufQ&quot;&gt;a cool demo of it&lt;/a&gt; yesterday.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;It took me a while to get used to the small differences between Lumen
+and Laravel. Mainly the lack of some
+&lt;a href=&quot;http://laravel.com/docs/5.1/artisan&quot;&gt;&lt;strong&gt;artisan&lt;/strong&gt;&lt;/a&gt; commands that I’ve
+grown used to (such as &lt;code&gt;key:generate&lt;/code&gt; and &lt;code&gt;tinker&lt;/code&gt;), and also that
+certain aspects of the framework are disabled by default, including DotEnv,
+and have to be enabled manually in &lt;code&gt;bootsrap/app.php&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In my Googling today, a typo lead me to a genuine
+&lt;a href=&quot;http://gary.mcad.am/articles/devember-01/%22https://en.wikipedia.org/wiki/Googlewhack%22&quot;&gt;Googlewhack!&lt;/a&gt;
+&lt;img src=&quot;/articles/devember-01/googlewhack.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;Stats for today: 5 commits, time spent 1h 5m 10s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember as a conduit for escaping procrastination</title>
       <link>http://gary.mcad.am/articles/devember/</link>
