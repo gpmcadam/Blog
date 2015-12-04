@@ -5,9 +5,168 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Thu, 03 Dec 2015 01:47:39 +0000</pubDate>
+    <pubDate>Thu, 03 Dec 2015 23:42:44 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 3</title>
+      <link>http://gary.mcad.am/articles/devember-03/</link>
+      <pubDate>Thu, 03 Dec 2015 23:42:44 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-03/</guid>
+      <author></author>
+      <description>&lt;p&gt;I &amp;lt;3 React! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Seriously, it’s great.&lt;/p&gt;
+&lt;div style=&quot;width: 100px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+    &lt;img src=&quot;/articles/devember-03/tayne.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It mixes really well with ES6, and while it takes a while to understand
+the nuances, once you get to grips with it &amp;ndash; even a little &amp;ndash;
+it pays off.&lt;/p&gt;
+&lt;p&gt;Today was a very productive hour, which started with me reluctantly
+opening my laptop in bed. I wasn’t very excited to carry on after
+&lt;a href=&quot;http://gary.mcad.am/articles/devember-02&quot;&gt;last night’s fiasco&lt;/a&gt;, but I’ve made up for it today I think.&lt;/p&gt;
+&lt;p&gt;I’ve not got a &lt;em&gt;huge&lt;/em&gt; amount done (just one small commit) but what’s
+there has lead me to learn a lot about React and ES6.&lt;/p&gt;
+&lt;h2 id=&quot;mocking-with-lumen&quot;&gt;Mocking with Lumen&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://lumen.laravel.com&quot;&gt;Lumen&lt;/a&gt; (or rather Laravel, really) allows for very quick mocking of API
+in the &lt;strong&gt;app/routes.php&lt;/strong&gt; file. I’ve got a simple API structure up and
+running to serve out the data for the user profile selector: &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$app-&amp;gt;group([&amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;api/profile&amp;#39;], function () use ($app) {
+    $app-&amp;gt;get(&amp;#39;/&amp;#39;, function() use($app) {
+        return response()-&amp;gt;json([
+                &amp;#39;profiles&amp;#39; =&amp;gt; [
+                    [
+                        &amp;#39;id&amp;#39; =&amp;gt; 1,
+                        &amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Arya&amp;#39;
+                    ],
+                    [
+                        &amp;#39;id&amp;#39; =&amp;gt; 2,
+                        &amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Brandon&amp;#39;
+                    ]
+                ]
+            ]);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;reactive-components&quot;&gt;Reactive Components&lt;/h2&gt;
+&lt;p&gt;I now have a simple component structure set up in react, and I’m
+rendering my profile selector like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Bloon/ProfileSelect.jsx
+import React from &amp;#39;react&amp;#39;;
+import $ from &amp;#39;jquery&amp;#39;;
+import Profile from &amp;#39;./Profile&amp;#39;;
+
+class ProfileSelect extends React.Component {
+
+    /**
+     * ProfileSelect Constructor
+     */
+    constructor(props) {
+        super(props)
+        this.mounted = false;
+        this.state = { profiles: [] };
+    }
+
+    /**
+     * componentDidMount event handler - fetches
+     * the component state via AJAX
+     */
+    componentDidMount() {
+        this.mounted = true;
+        Promise.resolve(
+            $.get(&amp;#39;/api/profile/&amp;#39;)
+        )
+        .then(function(data) {
+            if (this.mounted === true) {
+                this.setState({
+                    profiles: data.profiles
+                })
+            }
+        }.bind(this))
+        .catch(function(err) {
+            console.log(err);
+        });
+    }
+
+    /**
+     * componentWillUnmount event handler
+     */
+    componentWillUnmount() {
+        this.state = {};
+        this.mounted = false;
+    }
+
+    /**
+     * render handler
+     */
+    render() {
+        return (
+            &amp;lt;section className=&amp;quot;profiles&amp;quot;&amp;gt;{
+                this.state.profiles.map(profile =&amp;gt; &amp;lt;Profile key={profile.id} profile={profile} /&amp;gt;)
+            }
+            &amp;lt;/section&amp;gt;
+        )
+    }
+}
+
+export default ProfileSelect;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the above snippet, we consume our API method and keep
+track of our component mount state. This means our
+component state is handled asynchronously and allows it
+to re-render cleanly whenever the AJAX returns.&lt;/p&gt;
+&lt;p&gt;I’m not sure how efficient this is in the long term, I’ll need
+to investigate ways to streamline the access of the data from
+our PHP backend to React.&lt;/p&gt;
+&lt;p&gt;The thing I was most excited to discover is in our render function:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;render() {
+    return (
+        &amp;lt;section className=&amp;quot;profiles&amp;quot;&amp;gt;{
+            this.state.profiles.map(profile =&amp;gt; &amp;lt;Profile key={profile.id} profile={profile} /&amp;gt;)
+        }
+        &amp;lt;/section&amp;gt;
+    )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;div style=&quot;width: 250px; margin: 1em auto; text-align: center; color: #ccc&quot;&gt;
+    &lt;img src=&quot;/articles/devember-03/tasty.gif&quot; alt=&quot;&quot;&gt;
+    &lt;em&gt;Tasty!&lt;/em&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;This is just &lt;em&gt;beautiful&lt;/em&gt; to me. In short, we render our
+component as an HTML section element, and inside it
+we map each of the profiles returning a Profile component.&lt;/p&gt;
+&lt;p&gt;We do this so cleanly using &lt;a href=&quot;https://strongloop.com/strongblog/an-introduction-to-javascript-es6-arrow-functions/&quot;&gt;ES6 arrow functions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And our Profile component looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Bloon/Profile.jsx
+import React from &amp;#39;react&amp;#39;;
+
+class Profile extends React.Component {
+    render() {
+        return &amp;lt;div&amp;gt;{this.props.profile.name}&amp;lt;/div&amp;gt;
+    }
+}
+
+export default Profile;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In Chrome, using &lt;a href=&quot;https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en&quot;&gt;React Developer Tools&lt;/a&gt;, we can can see our React
+components in the virtual DOM:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/devember-03/reactdom.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It’s onwards and upwards from here. I’ll flesh out the UI in the
+days to come which will give me a chance to mock the rest of the API.
+Following that I’ll go back and fill in the gaps of the API and then
+finalise the functionality.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;React and ES6 seem to work well but there’s lots of room for
+improvement, this is apparent to me after only a few hours.&lt;/li&gt;
+&lt;li&gt;Also, on React, I think they should take a leaf out of Meteor’s
+books in terms of allowing more tightly coupled data bindings
+with a backend API&lt;/li&gt;
+&lt;li&gt;Shoutout to &lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt; and &lt;a href=&quot;https://github.com/babel/babelify&quot;&gt;Babelify&lt;/a&gt;
+for making everything so easy! Starting to really appreciate its benefit now.&lt;/li&gt;
+&lt;li&gt;Need to think about how to speed up build time with gulp. Hmm.&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 1h 17m 28s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 2</title>
       <link>http://gary.mcad.am/articles/devember-02/</link>
