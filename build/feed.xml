@@ -5,9 +5,73 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Thu, 03 Dec 2015 23:42:44 +0000</pubDate>
+    <pubDate>Sat, 05 Dec 2015 03:54:13 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 4</title>
+      <link>http://gary.mcad.am/articles/devember-04/</link>
+      <pubDate>Sat, 05 Dec 2015 03:54:13 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-04/</guid>
+      <author></author>
+      <description>&lt;p&gt;Up late again, toying with ES6+React.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Still
+spending some time getting to grips with the details of React, but I’ve
+managed to add some complexity.&lt;/p&gt;
+&lt;p&gt;I’ve also expanded on my gulpfile, learned more about gulp in general
+and spent a lot of time watching my stuff build &amp;ndash; Browserify can take
+a while to build!&lt;/p&gt;
+&lt;div style=&quot;width: 300px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+    &lt;img src=&quot;/articles/devember-04/waiting.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;moving-forward-with-react&quot;&gt;Moving Forward with React&lt;/h2&gt;
+&lt;p&gt;I’ve now managed to get a bit further with React, and I’m starting to
+generate a slightly more complicated structure to my app. I now have 6-7
+components and I’m doing some re-rendering based on events.&lt;/p&gt;
+&lt;p&gt;I’m not sure if this is the best way to handle the process, or I should simply
+let the browser redraw the page. This is something I’ll experiment with going
+forward.&lt;/p&gt;
+&lt;h2 id=&quot;gulp-newer-vs-gulp-changed&quot;&gt;gulp-newer vs gulp-changed&lt;/h2&gt;
+&lt;p&gt;As someone who always preferred using &lt;code&gt;grunt-newer&lt;/code&gt; for my build processes,
+moving to gulp was tricky. The community seems to prefer watch tasks.&lt;/p&gt;
+&lt;p&gt;After comparing two packages, &lt;strong&gt;gulp-newer&lt;/strong&gt; and &lt;strong&gt;gulp-changed&lt;/strong&gt;, I’ve
+settled on &lt;strong&gt;gulp-newer&lt;/strong&gt; as it allows you to check both 1:1 and many:1
+differences.&lt;/p&gt;
+&lt;h2 id=&quot;gulp-build-time-with-browserify&quot;&gt;Gulp Build Time with Browserify&lt;/h2&gt;
+&lt;p&gt;I’m still struggling with a very very slow build time, around ~25s per build.&lt;/p&gt;
+&lt;p&gt;This is due to the bundling of all files with Browserify, so I’m going to
+investigate how to lower this down. Thankfully using &lt;strong&gt;gulp-newer&lt;/strong&gt; means this
+will only run on any changes to my React, but still, it’s clumsy.&lt;/p&gt;
+&lt;p&gt;Also, as an aside, I need to figure out how to properly pipe Browserify through
+gulp, as my build output claims that gulp has finished compiling my JS before
+Browserify actually starts. Bit odd.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DEVEMBER BONUS!&lt;/strong&gt; I’ve spent some extra time this evening writing a small utility 
+to help &lt;a href=&quot;http://gary.mcad.am/articles/vagrant-up&quot;&gt;manage vagrant machines a little better&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Busy weekend planned, I’m going to try and get Day 5 done before going out, otherwise
+I guess I’m taking my laptop with me for some alcohol induced coding!&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 2h 57m 18s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Vagrant-Up</title>
+      <link>http://gary.mcad.am/articles/vagrant-up/</link>
+      <pubDate>Sat, 05 Dec 2015 03:53:40 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/vagrant-up/</guid>
+      <author></author>
+      <description>&lt;p&gt;Do you run 1 vagrant machine at a time?&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Do you switch vagrant machines a lot? Is this frustrating for you?&lt;/p&gt;
+&lt;p&gt;Well you should use &lt;a href=&quot;https://packagist.org/packages/gpmcadam/vagrant-up&quot;&gt;vagrant-up&lt;/a&gt; &amp;ndash; a lightweight utility to help manage one vagrant box at a time.&lt;/p&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install via Composer:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ composer global require gpmcadam/vagrant-up
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;After installation, simply run &lt;code&gt;vagrant-up&lt;/code&gt; in the directory of the vagrant box you want to bring up, and all other running vagrant machines will be suspended before bringing your desired machine up.&lt;/p&gt;
+&lt;p&gt;Nifty, ey?!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/vagrant-up/hat-wobble.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 3</title>
       <link>http://gary.mcad.am/articles/devember-03/</link>
