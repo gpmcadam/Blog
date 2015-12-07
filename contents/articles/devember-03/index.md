@@ -7,7 +7,7 @@ template: article.jade
 
 I &lt;3 React! <span class="more"></span> Seriously, it's great.
 
-<div style="width: 100px; margin: 1em auto; border: 1px solid #000;">
+<div class="img-responsive img-sm img-border">
     ![](tayne.gif)
 </div>
 
@@ -131,7 +131,7 @@ The thing I was most excited to discover is in our render function:
     }
 
 
-<div style="width: 250px; margin: 1em auto; text-align: center; color: #ccc">
+<div class="img-responsive img-md img-cap" >
     ![](tasty.gif)
     *Tasty!*
 </div>

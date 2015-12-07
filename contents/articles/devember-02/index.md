@@ -9,7 +9,7 @@ Day 2, and I've spent 4 hours this evening just fighting to get
 ReactJS to compile to ES5. Maybe I can just skip the next 3 days
 to compensate?<span class="more"></span>
 
-<div style="width: 200px; margin: 1em auto; border: 1px solid #000;">
+<div class="img-responsive img-border img-md">
     ![](fngggg.gif)
 </div>
 

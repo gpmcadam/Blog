@@ -13,7 +13,7 @@ I've also expanded on my gulpfile, learned more about gulp in general
 and spent a lot of time watching my stuff build &ndash; Browserify can take
 a while to build!
 
-<div style="width: 300px; margin: 1em auto; border: 1px solid #000;">
+<div class="img-responsive img-md img-border">
     ![](waiting.gif)
 </div>
 

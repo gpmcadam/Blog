@@ -446,3 +446,37 @@ code.lang-markdown .bullet {
     margin-bottom: 1em;
   }
 }
+
+.img-responsive {
+    max-width: 100%;
+    margin: 1em auto;
+}
+
+.img-responsive img {
+    width: 100%;
+}
+
+.img-border {
+    border: 1px solid #000;
+}
+
+.img-cap {
+    text-align: center;
+    color: #ccc
+}
+
+.img-sm {
+    width: 100px;
+}
+
+.img-md {
+    width: 250px;
+}
+
+.img-lg {
+    width: 400px;
+}
+
+.img-xl {
+    width: 600px;
+}

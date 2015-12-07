@@ -5,9 +5,65 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Sat, 05 Dec 2015 03:54:13 +0000</pubDate>
+    <pubDate>Mon, 07 Dec 2015 01:32:58 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 6</title>
+      <link>http://gary.mcad.am/articles/devember-06/</link>
+      <pubDate>Mon, 07 Dec 2015 01:32:58 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-06/</guid>
+      <author></author>
+      <description>&lt;p&gt;Today I decided to tackle the issue of having Browserify bundle my React/Babel/etc. files in less than 30 seconds.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And the results are in!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[01:26:13] Using gulpfile ~/Documents/Development/Bloon/gulpfile.js
+[01:26:13] Starting &amp;#39;js&amp;#39;...
+[01:26:13] Starting &amp;#39;sass&amp;#39;...
+[01:26:13] Finished &amp;#39;sass&amp;#39; after 17 ms
+[01:26:21] 2537121 bytes written (7.91 seconds)
+[01:26:21] Finished &amp;#39;js&amp;#39; after 7.99 s
+[01:26:21] Starting &amp;#39;default&amp;#39;...
+[01:26:21] Finished &amp;#39;default&amp;#39; after 17 μs
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&quot;img-responsive img-md&quot;&gt;
+&lt;img src=&quot;/articles/devember-06/yay.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Woo!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;OK so 8s still isn’t ideal. But it’s a lot better than 30. I can deal with that right now.&lt;/p&gt;
+&lt;h2 id=&quot;introducing-watchify&quot;&gt;Introducing Watchify&lt;/h2&gt;
+&lt;p&gt;After some digging, it turns out that the creators of Browserify, in realizing how slow Browserify can be, released &lt;a href=&quot;https://github.com/substack/watchify&quot;&gt;Watchify&lt;/a&gt; which helps to speed up the process… go figure.&lt;/p&gt;
+&lt;p&gt;My gulp file is now a mess, so I’m going to investigate some ways to clean it up by writing my tasks as modules &amp;ndash; but that’s enough fiddling with gulp for now, the current gulp file should do for now as I’m hoping to get back to the actual job tomorrow evening.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The auxiliary stuff surrounding development, such as setting up task runners and debugging them, tweaking them, is in my opinion the most tedious aspect of the job. I wish I could just remove it entirely.&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 1h 20m 31s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 5</title>
+      <link>http://gary.mcad.am/articles/devember-05/</link>
+      <pubDate>Sun, 06 Dec 2015 02:34:23 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-05/</guid>
+      <author></author>
+      <description>&lt;p&gt;Checking in from a hotel, still managed to get some stuff done! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;After a night out drinking with a client from work, I wasn’t sure how functional I’d be (I have another family-related festive social gathering tomorrow so I’ve tried to stay as un-drunk as I can in anticipation of that).&lt;/p&gt;
+&lt;p&gt;However, I’ve managed to stay awake and bring my laptop along to the hotel we’re staying at to check in.&lt;/p&gt;
+&lt;p&gt;Not a very productive hour, touching up some of the UI and mostly waiting for my gulp tasks to run (30s per run now) &amp;ndash; tomorrow’s priority will &lt;em&gt;have&lt;/em&gt; to be to investigate making 
+this more efficient!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-xl img-cap&quot;&gt;
+&lt;img src=&quot;/articles/devember-05/waiting.gif&quot; alt=&quot;&quot;&gt;
+&lt;em&gt;Literally me irl sat in the hotel waiting 30s per build in gulp&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pizza + Beer + Coding = Fun! Someone should do this with more coordination on a larger scale…&lt;/li&gt;
+&lt;li&gt;Premier Inn offer a free WiFi but it’s limited to 20 KB/s down, conveniently there’s an unlimited version of the exact same WiFi available for £5 for 24 hrs. Robbery. &lt;a href=&quot;http://www.reddit.com/r/firstworldproblems/&quot;&gt;#firstworldproblems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 48 mins&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 4</title>
       <link>http://gary.mcad.am/articles/devember-04/</link>
@@ -20,7 +76,7 @@ managed to add some complexity.&lt;/p&gt;
 &lt;p&gt;I’ve also expanded on my gulpfile, learned more about gulp in general
 and spent a lot of time watching my stuff build &amp;ndash; Browserify can take
 a while to build!&lt;/p&gt;
-&lt;div style=&quot;width: 300px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+&lt;div class=&quot;img-responsive img-md img-border&quot;&gt;
     &lt;img src=&quot;/articles/devember-04/waiting.gif&quot; alt=&quot;&quot;&gt;
 &lt;/div&gt;
 
@@ -79,7 +135,7 @@ I guess I’m taking my laptop with me for some alcohol induced coding!&lt;/li&g
       <guid isPermaLink="true">http://gary.mcad.am/articles/devember-03/</guid>
       <author></author>
       <description>&lt;p&gt;I &amp;lt;3 React! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Seriously, it’s great.&lt;/p&gt;
-&lt;div style=&quot;width: 100px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+&lt;div class=&quot;img-responsive img-sm img-border&quot;&gt;
     &lt;img src=&quot;/articles/devember-03/tayne.gif&quot; alt=&quot;&quot;&gt;
 &lt;/div&gt;
 
@@ -189,7 +245,7 @@ our PHP backend to React.&lt;/p&gt;
         &amp;lt;/section&amp;gt;
     )
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;div style=&quot;width: 250px; margin: 1em auto; text-align: center; color: #ccc&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&quot;img-responsive img-md img-cap&quot; &gt;
     &lt;img src=&quot;/articles/devember-03/tasty.gif&quot; alt=&quot;&quot;&gt;
     &lt;em&gt;Tasty!&lt;/em&gt;
 &lt;/div&gt;
@@ -240,7 +296,7 @@ for making everything so easy! Starting to really appreciate its benefit now.&lt
       <description>&lt;p&gt;Day 2, and I’ve spent 4 hours this evening just fighting to get
 ReactJS to compile to ES5. Maybe I can just skip the next 3 days
 to compensate?&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;div style=&quot;width: 200px; margin: 1em auto; border: 1px solid #000;&quot;&gt;
+&lt;div class=&quot;img-responsive img-border img-md&quot;&gt;
     &lt;img src=&quot;/articles/devember-02/fngggg.gif&quot; alt=&quot;&quot;&gt;
 &lt;/div&gt;
 
