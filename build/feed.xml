@@ -5,9 +5,32 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Mon, 07 Dec 2015 01:32:58 +0000</pubDate>
+    <pubDate>Tue, 08 Dec 2015 00:55:09 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 7</title>
+      <link>http://gary.mcad.am/articles/devember-07/</link>
+      <pubDate>Tue, 08 Dec 2015 00:55:09 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-07/</guid>
+      <author></author>
+      <description>&lt;p&gt;One week in.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-07/calendar.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I’ve logged 12 hours so far over 7 days. So far it’s gone OK and I’m more happy with what I’ve learned in this time than the results I’ve been able to produce.&lt;/p&gt;
+&lt;p&gt;I feel like I’ve gone from knowing only very little about React &amp;ndash; and next to nothing about Gulp, Babel, Browserify and ES6 &amp;ndash; and now I’ve got a good hold on the basics and a structure for a demo for this web app.&lt;/p&gt;
+&lt;p&gt;We’re just under 1/4 of the way through Devember and I feel like the next 7 days will be telling in terms of how quickly I’m hoping to get a fully working prototype of the app. I may have to sacrifice some functionality to get there.&lt;/p&gt;
+&lt;p&gt;Today I spent some time polishing the UI of the landing page and introducing some animation with the awesome &lt;a href=&quot;https://daneden.github.io/animate.css/&quot;&gt;animate.css&lt;/a&gt; project. Tomorrow, I’m going to hopefully spend some time investigating routing options for a single page app in React. I’ve looked very briefly at &lt;a href=&quot;https://github.com/rackt/react-router&quot;&gt;react-router&lt;/a&gt; but I’m not 100% sure if it’s what I need. Needs more thought!&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Odd hours meant I lost a github streak that would’ve lasted 31 days hopefully &lt;code&gt;:(&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The differences between SASS and LESS (other than syntax) aren’t that obvious to me yet, although compile time seems a lot quicker (anecdotally). Still waiting to discover the “killer feature” which separates the two.&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 1h 37m 32s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 6</title>
       <link>http://gary.mcad.am/articles/devember-06/</link>
