@@ -5,9 +5,30 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Tue, 08 Dec 2015 00:55:09 +0000</pubDate>
+    <pubDate>Wed, 09 Dec 2015 01:31:52 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 8</title>
+      <link>http://gary.mcad.am/articles/devember-08/</link>
+      <pubDate>Wed, 09 Dec 2015 01:31:52 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-08/</guid>
+      <author></author>
+      <description>&lt;p&gt;Experimenting with React and &lt;a href=&quot;https://visionmedia.github.io/page.js/&quot;&gt;Page.js&lt;/a&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;, an interesting micro client-side aimed at making the process of routing easier without the weight of an MVC framework.&lt;/p&gt;
+&lt;p&gt;What I fear I’m in danger of doing, however, is solving the ‘V’ part of MVC with React, and the ‘C’ part with Page.js. I’m handling the ‘M’ with AJAX and my API, so maybe I’m just cobbling together a franken-framework, of sorts?&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-08/monster.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Anyway, the experiment has been worthwhile. Page.js is a nifty little tool and it’s introducing routing to React has give me more control over my component rendering and organisation.&lt;/p&gt;
+&lt;p&gt;I’m having some issues with passing session information around now, and I wonder if I’m coming at this with my PHP-trained-brain, rather than trying to think in React. Right now I’m working with &lt;a href=&quot;https://www.npmjs.com/package/react-cookie&quot;&gt;react-cookie&lt;/a&gt; to help solve this, but I’m chasing myself around a bit in terms of how to handle state on various “pages” (basically a React component being rendered to a parent component.)&lt;/p&gt;
+&lt;p&gt;I do wonder whether, at this point, the maturity of something like Angular, Knockout or Backbone might be more useful. Something which I’ll experiment with tomorrow and then make a final decision.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 new branch, 1 commit, time spent 1h 56m 33s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 7</title>
       <link>http://gary.mcad.am/articles/devember-07/</link>

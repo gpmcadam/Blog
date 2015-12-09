@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/favicon.png">
-    <title>gary.mcad.am
+    <title>Devember Day 8 - gary.mcad.am
     </title>
     <link rel="alternate" href="http://gary.mcad.am/feed.xml" type="application/rss+xml" title="I paid for this domain, I might aswell use it">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
@@ -20,50 +20,37 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://gary.mcad.am">gary.mcad.am</a></h1>
-          <p class="description">I paid for this domain, I might aswell use it</p>
-        </div>
+        <h1>Devember Day 8</h1>
+        <p class="author">Written by <span class="author">Gary McAdam</span><span class="date"> | Dec 9th 2015</span>
+        </p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <h2><a href="/articles/devember-05/">Devember Day 5</a></h2>
-            <section class="content">
-              <date datetime="2015-12-06T02:34:23+00:00" title="Sunday, December 6 2015 2:34 AM" class="date">Dec 6th 2015</date><p>Checking in from a hotel, still managed to get some stuff&nbsp;done! 
-              <p class="more"><a href="/articles/devember-05/">more</a></p>
-            </section>
-          </header>
-        </article>
-        <article class="article intro">
-          <header>
-            <h2><a href="/articles/devember-04/">Devember Day 4</a></h2>
-            <section class="content">
-              <date datetime="2015-12-05T03:54:13+00:00" title="Saturday, December 5 2015 3:54 AM" class="date">Dec 5th 2015</date><p>Up late again, toying with&nbsp;<span class="caps">ES6</span>+React.
-              <p class="more"><a href="/articles/devember-04/">more</a></p>
-            </section>
-          </header>
-        </article>
-        <article class="article intro">
-          <header>
-            <h2><a href="/articles/vagrant-up/">Vagrant-Up</a></h2>
-            <section class="content">
-              <date datetime="2015-12-05T03:53:40+00:00" title="Saturday, December 5 2015 3:53 AM" class="date">Dec 5th 2015</date><p>Do you run 1 vagrant machine at a&nbsp;time?
-              <p class="more"><a href="/articles/vagrant-up/">more</a></p>
-            </section>
-          </header>
+        <article class="article">
+          <section class="content"><p>Experimenting with React and <a href="https://visionmedia.github.io/page.js/">Page.js</a><span class="more"></span>, an interesting micro client-side aimed at making the process of routing easier without the weight of an <span class="caps">MVC</span>&nbsp;framework.</p>
+<p>What I fear I’m in danger of doing, however, is solving the ‘V’ part of <span class="caps">MVC</span> with React, and the ‘C’ part with Page.js. I’m handling the ‘M’ with AJAX and my API, so maybe I’m just cobbling together a franken-framework, of&nbsp;sorts?</p>
+<div class="img-responsive img-lg">
+    <img src="/articles/devember-08/monster.gif" alt="">
+</div>
+
+<p>Anyway, the experiment has been worthwhile. Page.js is a nifty little tool and it’s introducing routing to React has give me more control over my component rendering and&nbsp;organisation.</p>
+<p>I’m having some issues with passing session information around now, and I wonder if I’m coming at this with my <span class="caps">PHP</span>-trained-brain, rather than trying to think in React. Right now I’m working with <a href="https://www.npmjs.com/package/react-cookie">react-cookie</a> to help solve this, but I’m chasing myself around a bit in terms of how to handle state on various “pages” (basically a React component being rendered to a parent&nbsp;component.)</p>
+<p>I do wonder whether, at this point, the maturity of something like Angular, Knockout or Backbone might be more useful. Something which I’ll experiment with tomorrow and then make a final&nbsp;decision.</p>
+<h2 id="today-s-observations">Today’s&nbsp;Observations</h2>
+<ul>
+<li>Stats for today: 1 new branch, 1 commit, time spent 1h 56m&nbsp;33s</li>
+</ul>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="/">« Newer</a><a href="/page/3/">Next page »</a>
-        </div>
+        <div class="nav"><a href="/">« Full blog</a></div>
         <section class="about"><p><span class="avatar">
     <img src="http://gravatar.com/avatar/f3d67277f7917e4967930da4ce0f8363?s=100" alt="">
 </span> <strong>Hello, I’m Gary!</strong></p>
