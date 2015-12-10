@@ -5,9 +5,31 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Wed, 09 Dec 2015 01:31:52 +0000</pubDate>
+    <pubDate>Thu, 10 Dec 2015 00:44:08 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 9</title>
+      <link>http://gary.mcad.am/articles/devember-09/</link>
+      <pubDate>Thu, 10 Dec 2015 00:44:08 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-09/</guid>
+      <author></author>
+      <description>&lt;p&gt;Argggggggh!!!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-09/not.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Too much time spent farting around trying to understand topics associated with React. Search terms today include: flux, reflux, react+backbone, backbone es6, backbone router es6, backbone react browserify … etc. etc.&lt;/p&gt;
+&lt;p&gt;Taking on too much? Need to commit more time than I have in an evening to properly understanding Flux and how to integrate it with React and maybe Backbone. Maybe I’ll just delete everything and start again?&lt;/p&gt;
+&lt;p&gt;Everyone has an opinion on how to do this, the community is chaotic right now. There’s a solution in here somewhere, and I can taste it. The key will be understanding Flux, I feel.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Out travelling for 2 nights, hoping for better hotel WiFi&lt;/li&gt;
+&lt;li&gt;Out at work’s Christmas party on Friday night &amp;ndash; that’ll be a fun thing to code after! 🎅 🍻&lt;/li&gt;
+&lt;li&gt;Stats for today: 0 commit, time spent 1h 30m 02s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 8</title>
       <link>http://gary.mcad.am/articles/devember-08/</link>
