@@ -5,9 +5,29 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Thu, 10 Dec 2015 00:44:08 +0000</pubDate>
+    <pubDate>Fri, 11 Dec 2015 02:10:23 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 10</title>
+      <link>http://gary.mcad.am/articles/devember-10/</link>
+      <pubDate>Fri, 11 Dec 2015 02:10:23 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-10/</guid>
+      <author></author>
+      <description>&lt;p&gt;On the move!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I’m in a hotel tonight and I’ve been out with a few friends so tonight I spent most of my time learning some more about &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt;, an application architecture/development methodology which works with React, developed by Facebook &amp;ndash; something which seems more and more important as I delve deeper into React. I’ll be spending time tonight and tomorrow to learning Flux and how to use it in my project. I’m also aware of &lt;a href=&quot;https://github.com/reflux/refluxjs&quot;&gt;Reflux&lt;/a&gt;, which I’ll be giving some attention to, and trying to determine which to go with.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-10/reflux.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It bothers me that I’m spending more time on learning these things than getting my hands dirty, but I’ve gotten to the point where I’m so unsure what to do next that I think taking a step back is needed, and hopefully I can push on after this.&lt;/p&gt;
+&lt;p&gt;I’m using &lt;a href=&quot;https://egghead.io/lessons/react-development-environment-setup?series=react-flux-architecture&quot;&gt;a great series of videos on egghead.io&lt;/a&gt; for my initial research. So no commits tonight! Christmas party tomorrow, so I’m guessing no commits then, either! Hopefully I’ll come out the other side knowing a lot more about Flux and being in a better position to move my app forward. (And ideally not very hungover!)&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hotel WiFi is better! £3 for 24 hrs though! :(&lt;/li&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent 1h 30m&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 9</title>
       <link>http://gary.mcad.am/articles/devember-09/</link>
