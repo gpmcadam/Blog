@@ -5,13 +5,51 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Fri, 11 Dec 2015 02:10:23 +0000</pubDate>
+    <pubDate>Sun, 13 Dec 2015 02:36:30 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Devember Day 12</title>
+      <link>http://gary.mcad.am/articles/devember-12/</link>
+      <pubDate>Sun, 13 Dec 2015 02:36:30 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-12/</guid>
+      <author></author>
+      <description>&lt;p&gt;Programming drunk is impossible, worse only than programming hungover…&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-12/dying.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;However, finally, &lt;a href=&quot;https://facebook.github.io/flux/docs/overview.html&quot;&gt;Flux&lt;/a&gt; makes sense!
+After spending another few hours tonight
+watching &lt;a href=&quot;https://egghead.io/series/react-flux-architecture-es6&quot;&gt;a great course on egghead.io&lt;/a&gt;,
+I’ve come out understanding the Flux architecture in a lot more detail!&lt;/p&gt;
+&lt;p&gt;This is exactly what I was talking about when I was pining for more structure and an imposed
+set of rules in React. The downside here though is that there are a lot of ways to interpret
+the Flux architecture, and there’s a lot of frameworks written around it.&lt;/p&gt;
+&lt;p&gt;I’m sure in the future the community will settle around a few big ideas. For now, I’m settling
+with a fairly bog-standard Flux architecture using Facebook’s &lt;a href=&quot;https://github.com/facebook/flux/&quot;&gt;flux&lt;/a&gt;
+package.&lt;/p&gt;
+&lt;h2 id=&quot;routing&quot;&gt;Routing&lt;/h2&gt;
+&lt;p&gt;After investigating Backbone and Page.js, it seemed obvious to me that
+&lt;a href=&quot;https://github.com/rackt/react-router&quot;&gt;react-router&lt;/a&gt; is the
+better choice. Anything else includes a lot of rewriting of stuff that’s already been well
+thought out, particularly around component re-rendering.&lt;/p&gt;
+&lt;h2 id=&quot;onwards-again-&quot;&gt;Onwards … again!?&lt;/h2&gt;
+&lt;p&gt;I feel like I’ve got a far better organised and more stable architecture to move on with now.
+I don’t anticipate any big changes to the structure until the first prototype is complete.&lt;/p&gt;
+&lt;p&gt;So next, it’ll be fleshing out the rest of the pages and including functionality.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cool ES6 tidbits worked with: &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings&quot;&gt;template strings&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;arrow functions&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator&quot;&gt;spread operator&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer&quot;&gt;object initialisation shorthand&lt;/a&gt; &amp;ndash; awesome!&lt;/li&gt;
+&lt;li&gt;Tried to catch up for missing a night &lt;a href=&quot;http://gary.mcad.am/articles/devember-11&quot;&gt;yesterday due to excessive drinking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stats for today: 3 commits, time spent: 2h 45m 58s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
       <title>Devember Day 11</title>
       <link>http://gary.mcad.am/articles/devember-11/</link>
-      <pubDate>Fri, 11 Dec 2015 02:10:23 +0000</pubDate>
+      <pubDate>Sat, 12 Dec 2015 06:00:00 +0000</pubDate>
       <guid isPermaLink="true">http://gary.mcad.am/articles/devember-11/</guid>
       <author></author>
       <description>&lt;p&gt;Zzzzzz&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; &lt;/p&gt;

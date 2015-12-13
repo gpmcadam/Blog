@@ -1,7 +1,7 @@
 ---
 title:  "Devember Day 11"
 author: Gary McAdam
-date:   2015-12-11T02:10:23+00:00
+date:   2015-12-12T06:00:00+00:00
 template: article.jade
 ---
 
