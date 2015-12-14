@@ -5,9 +5,35 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Sun, 13 Dec 2015 02:36:30 +0000</pubDate>
+    <pubDate>Mon, 14 Dec 2015 01:00:35 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 13</title>
+      <link>http://gary.mcad.am/articles/devember-13/</link>
+      <pubDate>Mon, 14 Dec 2015 01:00:35 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-13/</guid>
+      <author></author>
+      <description>&lt;p&gt;Something lighter today.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Well, some quick cleanup of some of the JSX, but following that I toyed with the UI of the playlists view.&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+    &lt;img src=&quot;/articles/devember-13/bloon-dev.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I’ve mocked up some playlists on the server side, which now gets served to the client. Depending on the size of the playlist, a weight is assigned to the “bubble” which is rendered. This then determines the size and animation qualities.&lt;/p&gt;
+&lt;p&gt;This looks OK right now, but when it gets closer to the end of the project, I’ll be amending the animation to be more realistic, have more variety per bubble and to have the weight based on other attributes such as age and popularity of the user.&lt;/p&gt;
+&lt;p&gt;Tomorrow I’ll be working on one of the things I’m anticipating being a pain and something I’m dreading, Google’s YouTube Embed player. This will probably take up my focus for the next week.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg img-cap&quot;&gt;
+    &lt;img src=&quot;/articles/devember-13/darkness.gif&quot; alt=&quot;&quot;&gt;
+    &lt;em&gt;Yay, Google APIs&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Working with animations in the browser directly isn’t the most fun, I wish there was a more flexible framework for writing powerful animations with complex behavious (e.g. altering the animation behaviour for various states)&lt;/li&gt;
+&lt;li&gt;Stats for today: 2 commits, time spent: 2h 16m&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 12</title>
       <link>http://gary.mcad.am/articles/devember-12/</link>
