@@ -5,9 +5,30 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Tue, 15 Dec 2015 01:13:59 +0000</pubDate>
+    <pubDate>Tue, 15 Dec 2015 23:54:30 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 15</title>
+      <link>http://gary.mcad.am/articles/devember-15/</link>
+      <pubDate>Tue, 15 Dec 2015 23:54:30 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-15/</guid>
+      <author></author>
+      <description>&lt;p&gt;Half-way there!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; However after a long night, I’ve found myself too tired to complete what I’m working on (the unfortunately tedius task of skinning a Video.js player interface).&lt;/p&gt;
+&lt;p&gt;Maybe with some sleep and a bit more energy I’ll find myself with more enthusiasm for the task tomorrow!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-15/sleepy.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ll see!&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;About half way until the end of Devember, and I feel like I’m about half way towards a working prototype. I’m hoping to begin some user testing later this week with my 2-year old daughter!&lt;/li&gt;
+&lt;li&gt;The majority of the rest of the month will likely focus on improvements to the UI and writing the parent interface.&lt;/li&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent: 27m 20s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 14</title>
       <link>http://gary.mcad.am/articles/devember-14/</link>
