@@ -11,7 +11,7 @@ gulp.task('build', shell.task([
 
 gulp.task('deploy', shell.task([
     'wintersmith build',
-    'cd build/ && s3cmd sync ./ s3://gary.mcad.am/'
+    'cd build/ && s3cmd sync --delete-removed ./ s3://gary.mcad.am/'
 ]));
 
 gulp.task('default', ['preview']);
