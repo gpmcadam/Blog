@@ -5,9 +5,61 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Tue, 15 Dec 2015 23:54:30 +0000</pubDate>
+    <pubDate>Thu, 17 Dec 2015 00:58:45 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 16</title>
+      <link>http://gary.mcad.am/articles/devember-16/</link>
+      <pubDate>Thu, 17 Dec 2015 00:58:45 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-16/</guid>
+      <author></author>
+      <description>&lt;p&gt;I’ve been exploring the concept of ‘Reactive’.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; The beauty of React is becoming more and more apparent to me. I’ve implemented a version of the Flux pattern with my React app, which adds so much simplicity to the flow of data and makes so much sense. Today though, something very simple blew my mind.&lt;/p&gt;
+&lt;h2 id=&quot;how-de-do-da-&quot;&gt;How-de-do-da?&lt;/h2&gt;
+&lt;p&gt;My player interface now renders a small toolbar across the top of the screen. When the video plays, I want the toolbar to disappear off the screen.&lt;/p&gt;
+&lt;p&gt;With jQuery, I might do the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Detect the &lt;code&gt;play&lt;/code&gt; and &lt;code&gt;pause&lt;/code&gt; event on the video element&lt;/li&gt;
+&lt;li&gt;Select the DOM element which contains both the toolbar and the player&lt;/li&gt;
+&lt;li&gt;Add a class to the parent DOM element (either &lt;code&gt;.play&lt;/code&gt; or &lt;code&gt;.pause&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add a rule in CSS to animate the element off screen&lt;/li&gt;
+&lt;li&gt;Remove the previous class (either &lt;code&gt;.play&lt;/code&gt; or &lt;code&gt;.pause&lt;/code&gt;) depending on the current state&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The code for this might look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this.player.on(&amp;#39;play&amp;#39;, function() {
+    $(&amp;#39;.player&amp;#39;).removeClass(&amp;#39;paused&amp;#39;).addClass(&amp;#39;playing&amp;#39;);
+});
+this.player.on(&amp;#39;pause&amp;#39;, function() {
+    $(&amp;#39;.player&amp;#39;).removeClass(&amp;#39;playing&amp;#39;).addClass(&amp;#39;paused&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This isn’t a bad approach, but it requires a pointer to the DOM element and means I have to get my hands dirty writing to the class attribute, I also have to track the state of the player to know which of the two classes to remove or to add. It’s just not a very clean approach.&lt;/p&gt;
+&lt;p&gt;So, here’s how this works with React:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;...
+this.player.on(&amp;#39;play&amp;#39;, () =&amp;gt; { this.setState({ playerState: &amp;#39;paused&amp;#39; }); });
+this.player.on(&amp;#39;pause&amp;#39;, () =&amp;gt; { this.setState({ playerState: &amp;#39;playing&amp;#39; }); });
+...
+render() {
+    return (
+        &amp;lt;div className={`player ${this.state.playerState}`}&amp;gt;
+            ...
+        &amp;lt;/div&amp;gt;
+    )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So what’s going on here? Well, if you’re new to React, the &lt;code&gt;setState&lt;/code&gt; method causes a re-render of the plugin. So when the player events fire, the state is modified to include the &lt;code&gt;playerState&lt;/code&gt; (either ‘paused’ or ‘playing’). And then our render method uses the &lt;code&gt;playerState&lt;/code&gt; in our state to determine what class to add to our player container.&lt;/p&gt;
+&lt;p&gt;Firstly, this approach is much cleaner. Rather than our events ending up with direct DOM modifications, events lead to &lt;em&gt;state&lt;/em&gt; modifications, which in turn get rendered back to the DOM.&lt;/p&gt;
+&lt;p&gt;But! The reason this is so incredible is because inside our &lt;code&gt;.player&lt;/code&gt; element we have a lot of DOM, including a video player embedding a YouTube &lt;code&gt;iframe&lt;/code&gt;. So what happens to all that important insidey stuff when the component re-renders?&lt;/p&gt;
+&lt;p&gt;Well, that’s the beauty of React. Nothing! It just … &lt;em&gt;knows&lt;/em&gt; … to only modify the HTML &lt;code&gt;class&lt;/code&gt; attribute and not modify any of the innards. How fucking awesome is that?&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-16/mindblown.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Since my previous commit was prior to midnight on the 15th and my most recent commit was after midnight on the 16th (i.e. the 17th) I’ve lost another github streak :(&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent: 2h 39m 3s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 15</title>
       <link>http://gary.mcad.am/articles/devember-15/</link>
