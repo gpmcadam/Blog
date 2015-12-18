@@ -1,11 +1,14 @@
 {
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-shell": "^0.5.1",
-    "moment": "2.3.x",
-    "typogr": "0.5.x",
-    "underscore": "1.4.x",
-    "wintersmith": "^2.2.4"
-  },
-  "private": "true"
+    "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-shell": "^0.5.1",
+        "moment": "2.3.x",
+        "typogr": "0.5.x",
+        "underscore": "1.4.x",
+        "wintersmith": "^2.2.4"
+    },
+    "private": "true",
+    "scripts": {
+        "test": "wintersmith build"
+    }
 }
