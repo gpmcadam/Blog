@@ -2,7 +2,9 @@
 title:  "Devember Day 6"
 author: Gary McAdam
 date:   2015-12-07T01:32:58+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 6
+category: devember2015
 ---
 
 Today I decided to tackle the issue of having Browserify bundle my React/Babel/etc. files in less than 30 seconds.<span class="more"></span>

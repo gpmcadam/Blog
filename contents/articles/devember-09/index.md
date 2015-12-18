@@ -2,7 +2,9 @@
 title:  "Devember Day 9"
 author: Gary McAdam
 date:   2015-12-10T00:44:08+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 9
+category: devember2015
 ---
 
 Argggggggh!!!<span class="more"></span>

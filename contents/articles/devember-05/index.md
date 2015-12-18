@@ -2,7 +2,9 @@
 title:  "Devember Day 5"
 author: Gary McAdam
 date:   2015-12-06T02:34:23+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 5
+category: devember2015
 ---
 
 Checking in from a hotel, still managed to get some stuff done! <span class="more"></span>

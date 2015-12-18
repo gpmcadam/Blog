@@ -4,10 +4,30 @@
     <title>gary.mcad.am</title>
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
-    <description>I paid for this domain, I might aswell use it</description>
-    <pubDate>Thu, 17 Dec 2015 00:58:45 +0000</pubDate>
+    <description>I paid for this domain, I might as well use it</description>
+    <pubDate>Fri, 18 Dec 2015 00:07:48 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 17</title>
+      <link>http://gary.mcad.am/articles/devember-17/</link>
+      <pubDate>Fri, 18 Dec 2015 00:07:48 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-17/</guid>
+      <author></author>
+      <description>&lt;p&gt;Quiet evening&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; tidying up some of the playlist code and the UI for playlists themselves.&lt;/p&gt;
+&lt;p&gt;Also I broke the player. I’m now too tired to fix it.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-17/broken.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Tomorrow I’ll fix the player. Following that I’m going to try and get started on the parental controls, which should end with bringing in live data from YouTube.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I broke the player&lt;/li&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent: 2h 24m 31s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 16</title>
       <link>http://gary.mcad.am/articles/devember-16/</link>

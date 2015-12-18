@@ -2,7 +2,9 @@
 title:  "Devember Day 11"
 author: Gary McAdam
 date:   2015-12-12T06:00:00+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 11
+category: devember2015
 ---
 
 Zzzzzz<span class="more"></span> 

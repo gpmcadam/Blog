@@ -2,7 +2,9 @@
 title:  "Devember Day 7"
 author: Gary McAdam
 date:   2015-12-08T00:55:09+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 7
+category: devember2015
 ---
 
 One week in.<span class="more"></span>

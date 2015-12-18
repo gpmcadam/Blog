@@ -2,7 +2,9 @@
 title:  "Devember Day 15"
 author: Gary McAdam
 date:   2015-12-15T23:54:30+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 15
+category: devember2015
 ---
 
 Half-way there!<span class="more"></span> However after a long night, I've found myself too tired to complete what I'm working on (the unfortunately tedius task of skinning a Video.js player interface).

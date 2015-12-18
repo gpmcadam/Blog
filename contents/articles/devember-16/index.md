@@ -2,7 +2,9 @@
 title:  "Devember Day 16"
 author: Gary McAdam
 date:   2015-12-17T00:58:45+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 16
+category: devember2015
 ---
 
 I've been exploring the concept of 'Reactive'.<span class="more"></span> The beauty of React is becoming more and more apparent to me. I've implemented a version of the Flux pattern with my React app, which adds so much simplicity to the flow of data and makes so much sense. Today though, something very simple blew my mind.

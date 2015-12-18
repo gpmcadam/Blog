@@ -2,7 +2,9 @@
 title:  "Devember Day 13"
 author: Gary McAdam
 date:   2015-12-14T01:00:35+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 13
+category: devember2015
 ---
 
 Something lighter today.<span class="more"></span> Well, some quick cleanup of some of the JSX, but following that I toyed with the UI of the playlists view.

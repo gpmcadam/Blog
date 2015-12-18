@@ -2,7 +2,9 @@
 title:  "Devember Day 10"
 author: Gary McAdam
 date:   2015-12-11T02:10:23+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 10
+category: devember2015
 ---
 
 On the move!<span class="more"></span> I'm in a hotel tonight and I've been out with a few friends so tonight I spent most of my time learning some more about [Flux](https://facebook.github.io/flux/), an application architecture/development methodology which works with React, developed by Facebook &ndash; something which seems more and more important as I delve deeper into React. I'll be spending time tonight and tomorrow to learning Flux and how to use it in my project. I'm also aware of [Reflux](https://github.com/reflux/refluxjs), which I'll be giving some attention to, and trying to determine which to go with.

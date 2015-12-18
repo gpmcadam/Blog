@@ -1,0 +1,16 @@
+extends article
+
+block append vars
+  - bodyclass = 'article-detail article-detail-devember2015'
+
+block header
+  include author
+  h1= page.title
+  p.author
+    | #{ 'Written by ' }
+    mixin author(page.metadata.author)
+    span.date= ' | ' + moment.utc(page.metadata.date).format('MMM Do YYYY')
+  div.note
+     | #{ 'This article is part '+page.metadata.seriesNumber+' of '}
+     a(href='/articles/devember') my #Devember 2015
+     | #{ ' series.'}

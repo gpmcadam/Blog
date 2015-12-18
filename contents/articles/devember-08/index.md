@@ -2,7 +2,9 @@
 title:  "Devember Day 8"
 author: Gary McAdam
 date:   2015-12-09T01:31:52+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 8
+category: devember2015
 ---
 
 Experimenting with React and [Page.js](https://visionmedia.github.io/page.js/)<span class="more"></span>, an interesting micro client-side aimed at making the process of routing easier without the weight of an MVC framework.

@@ -2,7 +2,9 @@
 title:  "Devember Day 14"
 author: Gary McAdam
 date:   2015-12-15T01:13:59+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 14
+category: devember2015
 ---
 
 I &lt;3 Flexbox.<span class="more"></span>

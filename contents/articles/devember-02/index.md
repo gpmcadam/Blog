@@ -2,7 +2,9 @@
 title:  "Devember Day 2"
 author: Gary McAdam
 date:   2015-12-03T01:47:39+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 2
+category: devember2015
 ---
 
 Day 2, and I've spent 4 hours this evening just fighting to get

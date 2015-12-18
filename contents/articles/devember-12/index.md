@@ -2,7 +2,9 @@
 title:  "Devember Day 12"
 author: Gary McAdam
 date:   2015-12-13T02:36:30+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 12
+category: devember2015
 ---
 
 Programming drunk is impossible, worse only than programming hungover...<span class="more"></span>

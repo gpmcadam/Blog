@@ -2,7 +2,9 @@
 title:  "Devember Day 3"
 author: Gary McAdam
 date:   2015-12-03T23:42:44+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 3
+category: devember2015
 ---
 
 I &lt;3 React! <span class="more"></span> Seriously, it's great.

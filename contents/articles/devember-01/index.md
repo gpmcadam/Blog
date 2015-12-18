@@ -2,7 +2,9 @@
 title:  "Devember Day 1"
 author: Gary McAdam
 date:   2015-12-01T23:03:56+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 1
+category: devember2015
 ---
 
 Day 1! I've managed to squeeze in 1 hour of development time this

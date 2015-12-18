@@ -1,0 +1,9 @@
+- var articles = _.chain(env.helpers.getArticles(contents)).filter(function(article) {
+-   return article.metadata.category === 'devember2015'; 
+- }).value()
+
+h3 Articles in Devember 2015
+ul
+    each article in articles
+        li
+            a(href=article.url)= article.title

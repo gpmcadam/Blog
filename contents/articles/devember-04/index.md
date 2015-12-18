@@ -2,7 +2,9 @@
 title:  "Devember Day 4"
 author: Gary McAdam
 date:   2015-12-05T03:54:13+00:00
-template: article.jade
+template: devember2015.jade
+seriesNumber: 4
+category: devember2015
 ---
 
 Up late again, toying with ES6+React.<span class="more"></span> Still

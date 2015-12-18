@@ -2,7 +2,7 @@
 title:  "Devember as a conduit for escaping procrastination"
 author: Gary McAdam
 date:   2015-11-27T22:48:56+00:00
-template: article.jade
+template: devember2015-index.jade
 ---
 
 So, I'll be doing [#Devember](http://devember.org/) this year for the first time. What's Devember?
