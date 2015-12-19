@@ -5,9 +5,10 @@ deploy:
   provider: s3
   access_key_id: AKIAIEKIFVWTG4DUBOWA
   secret_access_key:
-    secure: qXcI2krO8yBMbqpMHq6rleoB1Z9iAhwrXHdcmmy5GT1fPnG+mL/JVHSbI1Peu/d7+nQqhluEESFHAOy7D3ydaHv4T6ZFeD5MDDtfuLoySuKuLm+mw92jueGQRrfz+JL5fbJA3z6r7MSBIBw561ECPDm3d6Yrm9pojYLV1Qq3T9sVFckhpHEQfa+WDZrY36LffoS64Su2tUbcxqq45TG/+mTCx1CW++nDajZsFOMVe90+0Z+t9aFMQ1qnw4lVt2e2YoPdft+BZ2IyZowmZE+5N2yxruFAquVBVgEa3ePliZQ16UO6foYiGE6OJOqWlzLxwWn6Xx5/mD8rSprJX/iria3x9spI4hT6pqsUcSt59mT2aVlogYmt3vEyVbXa/+FftbdfcchaC2wDA+sniCcgZMdY3i+sP/AosS0V6lMbJgansgmsIF0u2XAqBcF5vTczIoiDOsvSArssv1VvzoYLoHn74sheURQOtCeqa0ML+vzUzXruXZ2X949lkQTF68zsPS1Eh2LmzGbxV1JXZe6/CVvKwmKaB8F/mo3zbV4ym/9D+AoLovYrR+VgY+OhZiNPi0RgngMaGBevHf6DFSuOKRqnZ5LfSKeG7wVms/OjELxfO5pAs61F6No/N3i0LMaG0CwmmmVNu5Fj+m3q8NtfqF8Pt3gl2naV1JSy3go6UL4=
-  bucket: s3://gary.mcad.am/
+    secure: AqS+xOGH8OnrAWkxmVuJ8ksxiP/w+6aqfb3gC6OG486Zjdevi0KTMuS37kqavjdWZgmh4y7/cPuklRTOQexczy1+GNQr5cY4DVBjlp3R/t3PBUPXWeRFBrOLCcKsBNN6LyqaKeC5qO5RDFFOjS94tjn8nGCOu/poPbuq1ez2Bdmpaa1ugAK7MkmWN5/x2ywhq21m02xqPGZ6d67ouURsLjUlqqWFim46uqo+gvINptyVWT2cnp64MHgwythgXqNN8sxtPeHvF/IK2sgC1MI72zrCigf19XRzAfYvyJdEB9OH5SOZu9jR0/oyXMUBXt9tg2fOdE5gAXaZbYbc17AvW1vWKBIJGw2S/AHZdZtsXh5JEv5W8NFEE7LEaEY2LwpGEP5mLhetzvTcwKrBGTFpwm2hCyAvJV51k/lI/b/58j6lUTAh9crIf9D2kVvtTdyhORCHDRH7Fj6ZiGELy5WQ5jdoKwYxxfgXHkz3nCKR/lCH1fbFaU83IXZhljs/+RlWQ+rz9F90WShmaa33HEYYjSlYYl8dRY0DQM7W9XwKlljxt/FsdI8opNpWBkm8ewskINeWDv7U7TIZIZJ8a6VL/F0bpYH0AFeylZCiGoa0SkWdSOXoE5HOf39MB6CK+aTfIkTb2sqPs1T/6NlbdJHHoAafkDFae3XBneIOnS/v8Xk=
+  bucket: gary.mcad.am
   local-dir: build
-  acl: public
+  # acl: ''
+  skip_cleanup: true
   on:
     repo: gpmcadam/Blog
