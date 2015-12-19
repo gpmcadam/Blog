@@ -1,3 +1,13 @@
 language: node_js
 node_js:
-  - "4.2.2"
+- 4.2.2
+deploy:
+  provider: s3
+  access_key_id: AKIAIEKIFVWTG4DUBOWA
+  secret_access_key:
+    secure: qXcI2krO8yBMbqpMHq6rleoB1Z9iAhwrXHdcmmy5GT1fPnG+mL/JVHSbI1Peu/d7+nQqhluEESFHAOy7D3ydaHv4T6ZFeD5MDDtfuLoySuKuLm+mw92jueGQRrfz+JL5fbJA3z6r7MSBIBw561ECPDm3d6Yrm9pojYLV1Qq3T9sVFckhpHEQfa+WDZrY36LffoS64Su2tUbcxqq45TG/+mTCx1CW++nDajZsFOMVe90+0Z+t9aFMQ1qnw4lVt2e2YoPdft+BZ2IyZowmZE+5N2yxruFAquVBVgEa3ePliZQ16UO6foYiGE6OJOqWlzLxwWn6Xx5/mD8rSprJX/iria3x9spI4hT6pqsUcSt59mT2aVlogYmt3vEyVbXa/+FftbdfcchaC2wDA+sniCcgZMdY3i+sP/AosS0V6lMbJgansgmsIF0u2XAqBcF5vTczIoiDOsvSArssv1VvzoYLoHn74sheURQOtCeqa0ML+vzUzXruXZ2X949lkQTF68zsPS1Eh2LmzGbxV1JXZe6/CVvKwmKaB8F/mo3zbV4ym/9D+AoLovYrR+VgY+OhZiNPi0RgngMaGBevHf6DFSuOKRqnZ5LfSKeG7wVms/OjELxfO5pAs61F6No/N3i0LMaG0CwmmmVNu5Fj+m3q8NtfqF8Pt3gl2naV1JSy3go6UL4=
+  bucket: s3://gary.mcad.am/
+  local-dir: build
+  acl: public
+  on:
+    repo: gpmcadam/Blog
