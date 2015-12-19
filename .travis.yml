@@ -10,5 +10,6 @@ deploy:
   local-dir: build
   # acl: ''
   skip_cleanup: true
+  region: eu-west-1
   on:
     repo: gpmcadam/Blog
