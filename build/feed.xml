@@ -5,9 +5,60 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it</description>
-    <pubDate>Fri, 18 Dec 2015 00:07:48 +0000</pubDate>
+    <pubDate>Sun, 20 Dec 2015 01:51:36 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 19</title>
+      <link>http://gary.mcad.am/articles/devember-19/</link>
+      <pubDate>Sun, 20 Dec 2015 01:51:36 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-19/</guid>
+      <author></author>
+      <description>&lt;p&gt;I fixed the player! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Yay!&lt;/p&gt;
+&lt;p&gt;Oh, and I also wrote my database models, updated my migrations to match the changes since the initial set of migrations were written, and seeded the database with some real-ish data. Now the app is serving out from the database!&lt;/p&gt;
+&lt;p&gt;Next up:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parent Interface (fill the database with real values)&lt;/li&gt;
+&lt;li&gt;Authentication (yeah, leaving that until last)&lt;/li&gt;
+&lt;li&gt;Hallway testing!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+ &lt;img src=&quot;/articles/devember-19/hallway.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 2 commits, time spent: 1h 34m 48s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 18</title>
+      <link>http://gary.mcad.am/articles/devember-18/</link>
+      <pubDate>Sat, 19 Dec 2015 02:18:00 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-18/</guid>
+      <author></author>
+      <description>&lt;p&gt;Quiet evening, &lt;em&gt;again!&lt;/em&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;My issues with the player component come from the destructive nature of VideoJS and the component life-cycle in ReactJS.&lt;/p&gt;
+&lt;p&gt;I feel I’m close to a solution but I’ve only been able to commit about an hour tonight after a busy schedule.&lt;/p&gt;
+&lt;h2 id=&quot;in-other-news&quot;&gt;In Other News&lt;/h2&gt;
+&lt;div class=&quot;img-responsive img-sm&quot;&gt;
+&lt;img src=&quot;https://travis-ci.org/gpmcadam/Blog.svg?branch=master&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The blog, however, I spent a few hours on since I wanted to test out a continuous integration system. I went with &lt;a href=&quot;http://travis-ci.org&quot;&gt;Travis&lt;/a&gt; in the end, and the blog is now publishing to Amazon S3 automatically upon commit! It’s something else I’ve failed to get up to speed on, and I’m glad I was able to during Devember. I intend to put up a more detailed post on Travis towards the end of the month.&lt;/p&gt;
+&lt;p&gt;I’ll also be looking at solutions that integrate with BitBucket, too.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player. Tomorrow I’ll fix the player…&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-18/future.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent: 1h 04m 10s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 17</title>
       <link>http://gary.mcad.am/articles/devember-17/</link>
