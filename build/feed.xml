@@ -5,9 +5,66 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it</description>
-    <pubDate>Sun, 20 Dec 2015 01:51:36 +0000</pubDate>
+    <pubDate>Sun, 20 Dec 2015 23:41:51 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 20</title>
+      <link>http://gary.mcad.am/articles/devember-20/</link>
+      <pubDate>Sun, 20 Dec 2015 23:41:51 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-20/</guid>
+      <author></author>
+      <description>&lt;p&gt;11 days to go! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I feel like I’m very close to a working prototype.&lt;/p&gt;
+&lt;p&gt;In fact, I could begin testing now if I spent some time fetching some data from YouTube to populate my database. But I think that would be a waste of time right now.&lt;/p&gt;
+&lt;p&gt;Besides, I spent some time getting the parent interface set up. I have, what I think is a pretty decent parent-protection dialog. It’s something that’s included in a lot of child-oriented apps. Basically, some how to stop the child from accidentally accessing the settings panel and breaking stuff. Usually this is done by a simple maths problem (I’ll be replacing this with TouchID in the final native version).&lt;/p&gt;
+&lt;p&gt;One thing I’ve found frustrating, as a parent, is that often our daughter will get stuck with the app prompting her to solve a maths problem. It’s not always obvious to her how to get of that screen, so for my version I’ve added a 15 second timer that will auto-close the parental control dialog if nothing has happened.&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+    &lt;img src=&quot;/articles/devember-20/parents.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This gave me a chance to look at including some very rapidly updating React components. In the screen-shot above, the scrollbar is rendered using the &lt;em&gt;amazing&lt;/em&gt; &lt;a href=&quot;https://react-bootstrap.github.io/&quot;&gt;react-bootstrap&lt;/a&gt; project&lt;sup&gt;1&lt;/sup&gt; and its progress amount is calculated inside a timer, updating every 100ms. React doesn’t flinch and the component updates smoothly.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this.countdownInterval = setInterval(() =&amp;gt; {
+    if (this.state.timeBeforeClosesNow &amp;gt; 0) {
+        this.setState({ timeBeforeClosesNow: (this.state.timeBeforeClosesNow-100) })
+    } else if (this.state.timeBeforeClosesNow &amp;lt;= 0) {
+        this.hideModal();
+    }
+}, 100);
+
+// ...
+
+&amp;lt;ProgressBar now={this.state.timeBeforeClosesNow/this.state.timeBeforeClosesMax*100} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Too smooth!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-20/ned.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;–&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Unfortunately I’ve had to roll back my project to Twitter Bootstrap 3.x as the react-bootstrap package doesn’t support 4.x yet. Not a biggie, and understandable. But still, I would’ve &lt;em&gt;loved&lt;/em&gt; to see it working with the new Bootstrap alpha.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Seriously, &lt;a href=&quot;https://react-bootstrap.github.io/components.html#forms&quot;&gt;this is too awesome&lt;/a&gt;:  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;Input
+  type=&amp;quot;text&amp;quot;
+  value={this.state.value}
+  placeholder=&amp;quot;Enter text&amp;quot;
+  label=&amp;quot;Working example with validation&amp;quot;
+  help=&amp;quot;Validation is based on string length.&amp;quot;
+  bsStyle={this.validationState()}
+  hasFeedback
+  ref=&amp;quot;input&amp;quot;
+  groupClassName=&amp;quot;group-class&amp;quot;
+  labelClassName=&amp;quot;label-class&amp;quot;
+  onChange={this.handleChange} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;One full day left in work until Christmas break! I’m still unsure whether that means more or less time on the project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Stats for today: 3 commits, time spent: 3h 27m 51s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 19</title>
       <link>http://gary.mcad.am/articles/devember-19/</link>
