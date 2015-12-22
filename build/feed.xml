@@ -4,10 +4,29 @@
     <title>gary.mcad.am</title>
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
-    <description>I paid for this domain, I might as well use it</description>
-    <pubDate>Sun, 20 Dec 2015 23:41:51 +0000</pubDate>
+    <description>I paid for this domain, I might as well use it!</description>
+    <pubDate>Tue, 22 Dec 2015 00:58:40 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 21</title>
+      <link>http://gary.mcad.am/articles/devember-21/</link>
+      <pubDate>Tue, 22 Dec 2015 00:58:40 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-21/</guid>
+      <author></author>
+      <description>&lt;p&gt;Ugh.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Not felt great today! Still managed to get about an hour in this evening after a nap and then some Christmas shopping courtesy of Amazon Prime One-Day Delivery.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-21/amazin-packaging.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Nothing of interest to note this evening, except that react-bootstrap is a &lt;em&gt;huge&lt;/em&gt; timesaver which I’m sad to only just discover. Makes me think there should be something similar available in PHP/Laravel.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lost my streak again for not comitting in 24 hours :(&lt;/li&gt;
+&lt;li&gt;Stats for today: 2 commits, time spent: 0h 53m 37s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 20</title>
       <link>http://gary.mcad.am/articles/devember-20/</link>
