@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - 4.2.2
 deploy:
+  branch: master
   provider: s3
   access_key_id: AKIAIEKIFVWTG4DUBOWA
   secret_access_key:
