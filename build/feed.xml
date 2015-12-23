@@ -5,9 +5,29 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Wed, 23 Dec 2015 01:42:16 +0000</pubDate>
+    <pubDate>Wed, 23 Dec 2015 23:30:02 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 23</title>
+      <link>http://gary.mcad.am/articles/devember-23/</link>
+      <pubDate>Wed, 23 Dec 2015 23:30:02 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-23/</guid>
+      <author></author>
+      <description>&lt;p&gt;Hallway testing today.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I managed to complete a simple version of the add profile form, and I brought with it some bad habits from my understanding of web forms.&lt;/p&gt;
+&lt;p&gt;After a brief chat with my (patient) wife regarding what &lt;em&gt;her&lt;/em&gt; expectations and opions on how the form might behave, I learned a few things which I think will postivively impact the design of the admin seciton.&lt;/p&gt;
+&lt;p&gt;Just a 5 minute chat while demoing the functionality has probably saved some later frustration, and shows the value of hallway testing.&lt;/p&gt;
+&lt;p&gt;Otherwise, very tired. Going to bed.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-23/data.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent: 1h 29m 13s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 22</title>
       <link>http://gary.mcad.am/articles/devember-22/</link>
