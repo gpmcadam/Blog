@@ -5,9 +5,28 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Tue, 22 Dec 2015 00:58:40 +0000</pubDate>
+    <pubDate>Wed, 23 Dec 2015 01:42:16 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 22</title>
+      <link>http://gary.mcad.am/articles/devember-22/</link>
+      <pubDate>Wed, 23 Dec 2015 01:42:16 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-22/</guid>
+      <author></author>
+      <description>&lt;p&gt;Fun fun fun.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Slow evening. Spent most of the day doing some last minute Christmas shopping, and then spent some time just focusing on some of the smaller things to do with the UI.&lt;/p&gt;
+&lt;p&gt;I’m &amp;ndash; strangely &amp;ndash; enjoying splitting out some of my requirements into sub-components. There’s a danger of abstracting too much, I suppose (mostly in terms of consuming time versus delivering the prototype.) It’s probably going to be Saturday/Sunday before I begin focusing some larger blocks of time per night to get this ready. But it’s coming together.&lt;/p&gt;
+&lt;p&gt;Also, today was my last day in work until the new year. So … yay.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-22/yay.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent: 1h 39m 49s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 21</title>
       <link>http://gary.mcad.am/articles/devember-21/</link>
