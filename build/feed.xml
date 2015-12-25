@@ -5,9 +5,27 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Wed, 23 Dec 2015 23:30:02 +0000</pubDate>
+    <pubDate>Fri, 25 Dec 2015 01:37:09 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 24</title>
+      <link>http://gary.mcad.am/articles/devember-24/</link>
+      <pubDate>Fri, 25 Dec 2015 01:37:09 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-24/</guid>
+      <author></author>
+      <description>&lt;p&gt;I pass.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I’ve spent all evening putting together Christmas gifts. My hands and brain are tired, so I’m going to sleep. Sorry!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-24/ikea.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent (preparing for Christmas): ~12h&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 23</title>
       <link>http://gary.mcad.am/articles/devember-23/</link>
