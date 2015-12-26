@@ -5,9 +5,28 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Fri, 25 Dec 2015 01:37:09 +0000</pubDate>
+    <pubDate>Sat, 26 Dec 2015 00:41:15 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 25</title>
+      <link>http://gary.mcad.am/articles/devember-25/</link>
+      <pubDate>Sat, 26 Dec 2015 00:41:15 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-25/</guid>
+      <author></author>
+      <description>&lt;p&gt;*&lt;em&gt;bangs head on table&lt;/em&gt;*.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I’ve just been fighting with small bits and pieces this evening, and getting distracted with browsing StackOverflow and chatting on the reactjs IRC channel.&lt;/p&gt;
+&lt;p&gt;Anyway, since it’s Christmas day, I haven’t had alot of opportunity. Unfortunately, after an hour and a half of programming my code isn’t running and I don’t have the patience to find out why, so I’m heading to bed. Will fix tomorrow.&lt;/p&gt;
+&lt;p&gt;Merry Christmas, everyone! :)&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+&lt;img src=&quot;/articles/devember-25/elf.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent 1h 29m 17s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 24</title>
       <link>http://gary.mcad.am/articles/devember-24/</link>
