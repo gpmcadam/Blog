@@ -1,7 +1,7 @@
 ---
 title:  "Devember Day 26"
 author: Gary McAdam
-date:   2015-12-26T00:41:15+00:00
+date:   2015-12-27T04:41:15+00:00
 template: devember2015.jade
 seriesNumber: 26
 category: devember2015

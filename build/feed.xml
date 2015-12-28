@@ -5,13 +5,31 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Sat, 26 Dec 2015 00:41:15 +0000</pubDate>
+    <pubDate>Mon, 28 Dec 2015 04:59:49 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Devember Day 27</title>
+      <link>http://gary.mcad.am/articles/devember-27/</link>
+      <pubDate>Mon, 28 Dec 2015 04:59:49 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-27/</guid>
+      <author></author>
+      <description>&lt;p&gt;Productive evening. &lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Very tired. Going to bed!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+&lt;img src=&quot;/articles/devember-27/sleep.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;React is surprisingly good at updating the DOM based on state changes due to hundreds of mouse move events, really impressed!&lt;/li&gt;
+&lt;li&gt;Stats for today: 2 commits, time spent 1h 49m 35s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
       <title>Devember Day 26</title>
       <link>http://gary.mcad.am/articles/devember-26/</link>
-      <pubDate>Sat, 26 Dec 2015 00:41:15 +0000</pubDate>
+      <pubDate>Sun, 27 Dec 2015 04:41:15 +0000</pubDate>
       <guid isPermaLink="true">http://gary.mcad.am/articles/devember-26/</guid>
       <author></author>
       <description>&lt;p&gt;Grunt grunt! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
