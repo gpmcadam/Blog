@@ -5,9 +5,36 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Mon, 28 Dec 2015 04:59:49 +0000</pubDate>
+    <pubDate>Tue, 29 Dec 2015 05:40:41 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 28</title>
+      <link>http://gary.mcad.am/articles/devember-28/</link>
+      <pubDate>Tue, 29 Dec 2015 05:40:41 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-28/</guid>
+      <author></author>
+      <description>&lt;p&gt;Final stretch.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We now have a simple interface to the YouTube search API. Which, as it happens, is horrendously slow! I’m not going to worry too much about the performance for now, but it’s going to be immediately impossible to use, so I need to look into how I can make this more efficient.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-28/mobile.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The UI needs working on, and it needs to be hooked up to the playlist management API, but it’s getting there.&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+&lt;img src=&quot;/articles/devember-28/search.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Once we have a way to add and remove videos, playlists and profiles, the only things left are to do with authentication.&lt;/p&gt;
+&lt;p&gt;My goal now is to simply get the prototype of this working locally, and so authentication will be the last thing (probably after the new year and after Devember entirely.)&lt;/p&gt;
+&lt;p&gt;I probably have another 4-8 hours of solid work left until I have a working version. Just 3 more days left!&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 5h 25m 21s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 27</title>
       <link>http://gary.mcad.am/articles/devember-27/</link>
