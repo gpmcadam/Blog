@@ -5,9 +5,35 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Tue, 29 Dec 2015 05:40:41 +0000</pubDate>
+    <pubDate>Wed, 30 Dec 2015 04:05:37 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 29</title>
+      <link>http://gary.mcad.am/articles/devember-29/</link>
+      <pubDate>Wed, 30 Dec 2015 04:05:37 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-29/</guid>
+      <author></author>
+      <description>&lt;p&gt;Right on time!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; My prototype is basically done.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-29/IMG_2268.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;OK so it’s very early stages, and there’s a few features that got jettisoned on the way &amp;ndash; but we’re there, effectively.&lt;/p&gt;
+&lt;p&gt;I’ve got 2 more #Devember days to polish some things and maybe work on the authentication/API side. Right now my API is basically one large &lt;code&gt;routes.php&lt;/code&gt; file with everything hacked into it. But it’s functioning well enough to serve the app right now.&lt;/p&gt;
+&lt;p&gt;Anyway, I’ve been setting up some playlists for my daughter to have a look at tomorrow morning when she wakes up, when I’ll start some end user testing! :D&lt;/p&gt;
+&lt;p&gt;I’ll know a lot more about the app tomorrow, and I’ll have &lt;a href=&quot;https://trello.com/b/E0sJf6x3/bloon-devember&quot;&gt;a longer list of bugs&lt;/a&gt;, I suspect.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-29/fly.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS web apps are bullshit. More on this in my summary in the New Year. &lt;/li&gt;
+&lt;li&gt;Stats for today: 3 commits, 1 tag (yay!), time spent 2h 52m 25s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 28</title>
       <link>http://gary.mcad.am/articles/devember-28/</link>
