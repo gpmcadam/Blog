@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
+    <title>Devember Day 30 - gary.mcad.am
+    </title>
+    <link rel="alternate" href="http://gary.mcad.am/feed.xml" type="application/rss+xml" title="I paid for this domain, I might as well use it!">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71094261-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="article-detail article-detail-devember2015">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Devember Day 30</h1>
+        <p class="author">Written by <span class="author">Gary McAdam</span><span class="date"> | Dec 31st 2015</span>
+        </p>
+        <div class="note">This article is part 30 of <a href="/articles/devember">my #Devember 2015</a> series.</div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>With the prototype working, today was spent performing a bit of testing<span class="more"></span> with my first user, my 2 year old daughter,&nbsp;Arya.</p>
+<p>She was excited to use the app when I pointed it out to her on the home screen, and the user interface was intuitive enough (albeit slow &ndash; again, I’ll come back to this later) that she was navigating around and watching her favourite YouTube videos<sup>[1]</sup> in no&nbsp;time.</p>
+<p>We discovered a few bugs and I’ve fixed those&nbsp;tonight.</p>
+<p>With the bugs squashed, it was time to work on adding some customisation of the playlist&nbsp;items.</p>
+<h2 id="bing-api-is-surprisingly-good-and-the-php-league-prove-to-be-invaluable-again-">Bing <span class="caps">API</span> is surprisingly good and the PHP League prove to be invaluable&nbsp;again!</h2>
+<div class="img-responsive img-lg">
+    <img src="/articles/devember-30/notbad.gif" alt="">
+</div>
+
+<p>I integrated with Bing’s Image Search <span class="caps">API</span> and the <a href="https://github.com/thephpleague/color-extractor"><span class="caps">PHP</span> League’s Color Extractor library</a>. This means that all the parent does is choose an image related to the name of the playlist, and Bloon will fetch it, extract some colour information and show this on the interface to the child&nbsp;user.</p>
+<p>This was very easy to set up, and while it needs a bit of tweaking, I’m very happy with the&nbsp;results!</p>
+<div class="img-responsive img-cap">
+    <img src="/articles/devember-30/playlist.png" alt="">
+    <em>The border and bubble colours shown here are extracted dynamically from the source image shown inside the bubble</em>
+</div>
+
+<hr>
+<p>  <sup>1. It’s worth noting just how great it was to have my daughter be able to browse her favourite YouTube videos with complete restriction, knowing she would only get to the ones I had set up. Not only that, but the feeling of having conceived this idea and been able to deliver it in ~30 days, was a great one.</sup></p>
+<h2 id="today-s-observations">Today’s&nbsp;Observations</h2>
+<ul>
+<li>Stats for today: 4 commits, 1 tag , time spent 4h 44m&nbsp;48s</li>
+</ul>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p><span class="avatar">
+    <img src="http://gravatar.com/avatar/f3d67277f7917e4967930da4ce0f8363?s=100" alt="">
+</span> <strong>Hello, I’m Gary!</strong></p>
+<p>I’m a bit of a web developer, designer and training systems architect living on a hill in Yorkshire with my wife, daughter and two cats.</p>
+<p>I’m also somewhat active on <a href="https://twitter.com/gpmcadam">other social things</a>, too &ndash; but don’t hold it against me! (<em>I try to be nice to others most of the time.</em>)</p>
+<p>You can view some of the things I’ve worked on on <a href="https://github.com/gpmcadam">that social coding place everyone raves about.</a></p>
+<p>I sometimes post photographs <a href="http://instagram.com/gpmcadam">on that other one</a>, aswell. And from time to time I try to help people with their programming on <a href="http://stackoverflow.com/users/171758/gpmcadam">that one you always use to do your homework.</a></p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2015 Gary McAdam &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

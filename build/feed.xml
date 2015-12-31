@@ -5,9 +5,39 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Wed, 30 Dec 2015 04:05:37 +0000</pubDate>
+    <pubDate>Thu, 31 Dec 2015 05:06:56 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 30</title>
+      <link>http://gary.mcad.am/articles/devember-30/</link>
+      <pubDate>Thu, 31 Dec 2015 05:06:56 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-30/</guid>
+      <author></author>
+      <description>&lt;p&gt;With the prototype working, today was spent performing a bit of testing&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; with my first user, my 2 year old daughter, Arya.&lt;/p&gt;
+&lt;p&gt;She was excited to use the app when I pointed it out to her on the home screen, and the user interface was intuitive enough (albeit slow &amp;ndash; again, I’ll come back to this later) that she was navigating around and watching her favourite YouTube videos&lt;sup&gt;[1]&lt;/sup&gt; in no time.&lt;/p&gt;
+&lt;p&gt;We discovered a few bugs and I’ve fixed those tonight.&lt;/p&gt;
+&lt;p&gt;With the bugs squashed, it was time to work on adding some customisation of the playlist items.&lt;/p&gt;
+&lt;h2 id=&quot;bing-api-is-surprisingly-good-and-the-php-league-prove-to-be-invaluable-again-&quot;&gt;Bing API is surprisingly good and the PHP League prove to be invaluable again!&lt;/h2&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-30/notbad.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I integrated with Bing’s Image Search API and the &lt;a href=&quot;https://github.com/thephpleague/color-extractor&quot;&gt;PHP League’s Color Extractor library&lt;/a&gt;. This means that all the parent does is choose an image related to the name of the playlist, and Bloon will fetch it, extract some colour information and show this on the interface to the child user.&lt;/p&gt;
+&lt;p&gt;This was very easy to set up, and while it needs a bit of tweaking, I’m very happy with the results!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-cap&quot;&gt;
+    &lt;img src=&quot;/articles/devember-30/playlist.png&quot; alt=&quot;&quot;&gt;
+    &lt;em&gt;The border and bubble colours shown here are extracted dynamically from the source image shown inside the bubble&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;  &lt;sup&gt;1. It’s worth noting just how great it was to have my daughter be able to browse her favourite YouTube videos with complete restriction, knowing she would only get to the ones I had set up. Not only that, but the feeling of having conceived this idea and been able to deliver it in ~30 days, was a great one.&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 4 commits, 1 tag , time spent 4h 44m 48s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 29</title>
       <link>http://gary.mcad.am/articles/devember-29/</link>
