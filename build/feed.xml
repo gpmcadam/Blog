@@ -5,9 +5,68 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Thu, 31 Dec 2015 05:06:56 +0000</pubDate>
+    <pubDate>Fri, 01 Jan 2016 03:12:51 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 31</title>
+      <link>http://gary.mcad.am/articles/devember-31/</link>
+      <pubDate>Fri, 01 Jan 2016 03:12:51 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-31/</guid>
+      <author></author>
+      <description>&lt;p&gt;Happy New Year!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-31/newyear.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, that’s it! All done. I made it to the other side! A full month of Development complete. It’s over. Phew!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-31/phew.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Well, today’s post will be like no other, I’ll be summing up &lt;em&gt;just today’s findings&lt;/em&gt; &amp;ndash; but, I’m planning to write a big follow-up post in the next few days to summarise my thoughts on the project, the next steps, Devember, some of the tools I’ve used and a few other bits!&lt;/p&gt;
+&lt;p&gt;So, what have I been up to this New Year’s Eve? …&lt;/p&gt;
+&lt;h2 id=&quot;-s-moving-s-upgrading-from-lumen-to-laravel&quot;&gt;&lt;s&gt;Moving&lt;/s&gt; Upgrading from Lumen to Laravel&lt;/h2&gt;
+&lt;p&gt;I decided, in order to resolve a few things that I had on my list today, that the best thing would be to say goodbye to Lumen and move to its more mature older brother, Laravel.&lt;/p&gt;
+&lt;p&gt;My reasoning for this is simple: I don’t know what Lumen exists for. Laravel is, maybe just for my needs, just as quick and has just the same kind of footprint on disk (from an organisational standpoint).&lt;/p&gt;
+&lt;p&gt;So, given that Lumen lacks a lot of the features, but doesn’t really bring anything else to the table, I decide to move to Laravel.&lt;/p&gt;
+&lt;p&gt;This process wasn’t straightforward, and was mostly manual, involving creating a new Laravel project and manually moving my &lt;code&gt;resources/&lt;/code&gt;, &lt;code&gt;public/&lt;/code&gt;, &lt;code&gt;app/Http/&lt;/code&gt;, etc. folders on top of the Laravel ones.&lt;/p&gt;
+&lt;h2 id=&quot;testing-the-api&quot;&gt;Testing the API&lt;/h2&gt;
+&lt;p&gt;I set up some very simple unit tests to ensure that my API was working. I still need to come up with a way to get coverage on the destructive API methods, such as &lt;code&gt;create&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt;, &lt;code&gt;store&lt;/code&gt;, and &lt;code&gt;destroy&lt;/code&gt;. Until then, I’ve got &lt;em&gt;some&lt;/em&gt; coverage as a simple sanity check to make sure that everything looks OK.&lt;/p&gt;
+&lt;p&gt;This is made very easy by using the &lt;a href=&quot;https://laravel.com/docs/5.2/testing&quot;&gt;Laravel test&lt;/a&gt; frameworks &lt;code&gt;seeJsonStructure&lt;/code&gt; method. So, if my API returns some JSON like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/playlists/6
+
+{
+  &amp;quot;playlist&amp;quot;: {
+    &amp;quot;id&amp;quot;: 6,
+    &amp;quot;profile_id&amp;quot;: &amp;quot;1&amp;quot;,
+    &amp;quot;name&amp;quot;: &amp;quot;Hey Duggee &amp;quot;,
+    &amp;quot;img&amp;quot;: &amp;quot;/img/playlists/72cdbc27931177b9dd1be93b232b9e240bd4a50c.jpg&amp;quot;,
+    &amp;quot;bg&amp;quot;: &amp;quot;#63CD61&amp;quot;,
+    &amp;quot;fg&amp;quot;: &amp;quot;#FFCC01&amp;quot;,
+    &amp;quot;created_at&amp;quot;: &amp;quot;2015-12-30 03:57:51&amp;quot;,
+    &amp;quot;updated_at&amp;quot;: &amp;quot;2015-12-31 04:49:06&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+      ...
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I can assert that the API is working with a simple test case as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public function testPlaylist()
+{
+    $this-&amp;gt;get(&amp;#39;/api/playlists/6&amp;#39;)
+        -&amp;gt;seeJsonStructure([&amp;#39;playlist&amp;#39; =&amp;gt; [ &amp;#39;id&amp;#39; ]]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test ensures that the JSON returned has the &lt;code&gt;playlist&lt;/code&gt; object, and that it has an &lt;code&gt;id&lt;/code&gt; column.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;As I said, I will be giving a bigger summary later this week, but it should be said that &lt;a href=&quot;http://devember.org/&quot;&gt;Devember&lt;/a&gt; for me has been amazing! I’m thankful for taking part and it’s been one of the most enjoyable and rewarding months of programming in a long time. So thanks to everyone &lt;a href=&quot;https://twitter.com/joindevember&quot;&gt;at Devember&lt;/a&gt; for organising it.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maybe thankfully, my plans for New Year fell through this evening, and it gave me all night (between spending time with my family and observing the goings on elsewhere on TV) to commit some time to finishing up a few things for my final Devember day.&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, 1 branch, 6h 1m 54s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 30</title>
       <link>http://gary.mcad.am/articles/devember-30/</link>
