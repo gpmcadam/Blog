@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
+    <title>Devember Day 31 - gary.mcad.am
+    </title>
+    <link rel="alternate" href="http://gary.mcad.am/feed.xml" type="application/rss+xml" title="I paid for this domain, I might as well use it!">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71094261-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="article-detail article-detail-devember2015">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Devember Day 31</h1>
+        <p class="author">Written by <span class="author">Gary McAdam</span><span class="date"> | Jan 1st 2016</span>
+        </p>
+        <div class="note">This article is part 31 of <a href="/articles/devember">my #Devember 2015</a> series.</div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Happy New Year!<span class="more"></span></p>
+<div class="img-responsive img-lg">
+    <img src="/articles/devember-31/newyear.gif" alt="">
+</div>
+
+<p>So, that’s it! All done. I made it to the other side! A full month of Development complete. It’s over.&nbsp;Phew!</p>
+<div class="img-responsive img-lg">
+    <img src="/articles/devember-31/phew.gif" alt="">
+</div>
+
+<p>Well, today’s post will be like no other, I’ll be summing up <em>just today’s findings</em> &ndash; but, I’m planning to write a big follow-up post in the next few days to summarise my thoughts on the project, the next steps, Devember, some of the tools I’ve used and a few other&nbsp;bits!</p>
+<p>So, what have I been up to this New Year’s Eve?&nbsp;…</p>
+<h2 id="-s-moving-s-upgrading-from-lumen-to-laravel"><s>Moving</s> Upgrading from Lumen to&nbsp;Laravel</h2>
+<p>I decided, in order to resolve a few things that I had on my list today, that the best thing would be to say goodbye to Lumen and move to its more mature older brother,&nbsp;Laravel.</p>
+<p>My reasoning for this is simple: I don’t know what Lumen exists for. Laravel is, maybe just for my needs, just as quick and has just the same kind of footprint on disk (from an organisational&nbsp;standpoint).</p>
+<p>So, given that Lumen lacks a lot of the features, but doesn’t really bring anything else to the table, I decide to move to&nbsp;Laravel.</p>
+<p>This process wasn’t straightforward, and was mostly manual, involving creating a new Laravel project and manually moving my <code>resources/</code>, <code>public/</code>, <code>app/Http/</code>, etc. folders on top of the Laravel&nbsp;ones.</p>
+<h2 id="testing-the-api">Testing the&nbsp;<span class="caps">API</span></h2>
+<p>I set up some very simple unit tests to ensure that my <span class="caps">API</span> was working. I still need to come up with a way to get coverage on the destructive API methods, such as <code>create</code>, <code>update</code>, <code>store</code>, and <code>destroy</code>. Until then, I’ve got <em>some</em> coverage as a simple sanity check to make sure that everything looks&nbsp;<span class="caps">OK</span>.</p>
+<p>This is made very easy by using the <a href="https://laravel.com/docs/5.2/testing">Laravel test</a> frameworks <code>seeJsonStructure</code> method. So, if my <span class="caps">API</span> returns some JSON like&nbsp;this:</p>
+<pre><code>GET /api/playlists/6
+
+{
+  &quot;playlist&quot;: {
+    &quot;id&quot;: 6,
+    &quot;profile_id&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;Hey Duggee &quot;,
+    &quot;img&quot;: &quot;/img/playlists/72cdbc27931177b9dd1be93b232b9e240bd4a50c.jpg&quot;,
+    &quot;bg&quot;: &quot;#63CD61&quot;,
+    &quot;fg&quot;: &quot;#FFCC01&quot;,
+    &quot;created_at&quot;: &quot;2015-12-30 03:57:51&quot;,
+    &quot;updated_at&quot;: &quot;2015-12-31 04:49:06&quot;,
+    &quot;items&quot;: [
+      ...
+    ]
+  }
+}
+</code></pre><p>I can assert that the <span class="caps">API</span> is working with a simple test case as&nbsp;follows:</p>
+<pre><code>public function testPlaylist()
+{
+    $this-&gt;get(&#39;/api/playlists/6&#39;)
+        -&gt;seeJsonStructure([&#39;playlist&#39; =&gt; [ &#39;id&#39; ]]);
+}
+</code></pre><p>This test ensures that the <span class="caps">JSON</span> returned has the <code>playlist</code> object, and that it has an <code>id</code> column.</p>
+<hr>
+<p>As I said, I will be giving a bigger summary later this week, but it should be said that <a href="http://devember.org/">Devember</a> for me has been amazing! I’m thankful for taking part and it’s been one of the most enjoyable and rewarding months of programming in a long time. So thanks to everyone <a href="https://twitter.com/joindevember">at Devember</a> for organising&nbsp;it.</p>
+<h2 id="today-s-observations">Today’s&nbsp;Observations</h2>
+<ul>
+<li>Maybe thankfully, my plans for New Year fell through this evening, and it gave me all night (between spending time with my family and observing the goings on elsewhere on <span class="caps">TV</span>) to commit some time to finishing up a few things for my final Devember&nbsp;day.</li>
+<li>Stats for today: 1 commit, 1 branch, 6h 1m&nbsp;54s</li>
+</ul>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p><span class="avatar">
+    <img src="http://gravatar.com/avatar/f3d67277f7917e4967930da4ce0f8363?s=100" alt="">
+</span> <strong>Hello, I’m Gary!</strong></p>
+<p>I’m a bit of a web developer, designer and training systems architect living on a hill in Yorkshire with my wife, daughter and two cats.</p>
+<p>I’m also somewhat active on <a href="https://twitter.com/gpmcadam">other social things</a>, too &ndash; but don’t hold it against me! (<em>I try to be nice to others most of the time.</em>)</p>
+<p>You can view some of the things I’ve worked on on <a href="https://github.com/gpmcadam">that social coding place everyone raves about.</a></p>
+<p>I sometimes post photographs <a href="http://instagram.com/gpmcadam">on that other one</a>, aswell. And from time to time I try to help people with their programming on <a href="http://stackoverflow.com/users/171758/gpmcadam">that one you always use to do your homework.</a></p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2016 Gary McAdam &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

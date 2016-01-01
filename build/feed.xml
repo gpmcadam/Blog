@@ -5,9 +5,270 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Tue, 22 Dec 2015 00:58:40 +0000</pubDate>
+    <pubDate>Fri, 01 Jan 2016 03:12:51 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Devember Day 31</title>
+      <link>http://gary.mcad.am/articles/devember-31/</link>
+      <pubDate>Fri, 01 Jan 2016 03:12:51 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-31/</guid>
+      <author></author>
+      <description>&lt;p&gt;Happy New Year!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-31/newyear.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, that’s it! All done. I made it to the other side! A full month of Development complete. It’s over. Phew!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-31/phew.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Well, today’s post will be like no other, I’ll be summing up &lt;em&gt;just today’s findings&lt;/em&gt; &amp;ndash; but, I’m planning to write a big follow-up post in the next few days to summarise my thoughts on the project, the next steps, Devember, some of the tools I’ve used and a few other bits!&lt;/p&gt;
+&lt;p&gt;So, what have I been up to this New Year’s Eve? …&lt;/p&gt;
+&lt;h2 id=&quot;-s-moving-s-upgrading-from-lumen-to-laravel&quot;&gt;&lt;s&gt;Moving&lt;/s&gt; Upgrading from Lumen to Laravel&lt;/h2&gt;
+&lt;p&gt;I decided, in order to resolve a few things that I had on my list today, that the best thing would be to say goodbye to Lumen and move to its more mature older brother, Laravel.&lt;/p&gt;
+&lt;p&gt;My reasoning for this is simple: I don’t know what Lumen exists for. Laravel is, maybe just for my needs, just as quick and has just the same kind of footprint on disk (from an organisational standpoint).&lt;/p&gt;
+&lt;p&gt;So, given that Lumen lacks a lot of the features, but doesn’t really bring anything else to the table, I decide to move to Laravel.&lt;/p&gt;
+&lt;p&gt;This process wasn’t straightforward, and was mostly manual, involving creating a new Laravel project and manually moving my &lt;code&gt;resources/&lt;/code&gt;, &lt;code&gt;public/&lt;/code&gt;, &lt;code&gt;app/Http/&lt;/code&gt;, etc. folders on top of the Laravel ones.&lt;/p&gt;
+&lt;h2 id=&quot;testing-the-api&quot;&gt;Testing the API&lt;/h2&gt;
+&lt;p&gt;I set up some very simple unit tests to ensure that my API was working. I still need to come up with a way to get coverage on the destructive API methods, such as &lt;code&gt;create&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt;, &lt;code&gt;store&lt;/code&gt;, and &lt;code&gt;destroy&lt;/code&gt;. Until then, I’ve got &lt;em&gt;some&lt;/em&gt; coverage as a simple sanity check to make sure that everything looks OK.&lt;/p&gt;
+&lt;p&gt;This is made very easy by using the &lt;a href=&quot;https://laravel.com/docs/5.2/testing&quot;&gt;Laravel test&lt;/a&gt; frameworks &lt;code&gt;seeJsonStructure&lt;/code&gt; method. So, if my API returns some JSON like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/playlists/6
+
+{
+  &amp;quot;playlist&amp;quot;: {
+    &amp;quot;id&amp;quot;: 6,
+    &amp;quot;profile_id&amp;quot;: &amp;quot;1&amp;quot;,
+    &amp;quot;name&amp;quot;: &amp;quot;Hey Duggee &amp;quot;,
+    &amp;quot;img&amp;quot;: &amp;quot;/img/playlists/72cdbc27931177b9dd1be93b232b9e240bd4a50c.jpg&amp;quot;,
+    &amp;quot;bg&amp;quot;: &amp;quot;#63CD61&amp;quot;,
+    &amp;quot;fg&amp;quot;: &amp;quot;#FFCC01&amp;quot;,
+    &amp;quot;created_at&amp;quot;: &amp;quot;2015-12-30 03:57:51&amp;quot;,
+    &amp;quot;updated_at&amp;quot;: &amp;quot;2015-12-31 04:49:06&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+      ...
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I can assert that the API is working with a simple test case as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public function testPlaylist()
+{
+    $this-&amp;gt;get(&amp;#39;/api/playlists/6&amp;#39;)
+        -&amp;gt;seeJsonStructure([&amp;#39;playlist&amp;#39; =&amp;gt; [ &amp;#39;id&amp;#39; ]]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test ensures that the JSON returned has the &lt;code&gt;playlist&lt;/code&gt; object, and that it has an &lt;code&gt;id&lt;/code&gt; column.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;As I said, I will be giving a bigger summary later this week, but it should be said that &lt;a href=&quot;http://devember.org/&quot;&gt;Devember&lt;/a&gt; for me has been amazing! I’m thankful for taking part and it’s been one of the most enjoyable and rewarding months of programming in a long time. So thanks to everyone &lt;a href=&quot;https://twitter.com/joindevember&quot;&gt;at Devember&lt;/a&gt; for organising it.&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maybe thankfully, my plans for New Year fell through this evening, and it gave me all night (between spending time with my family and observing the goings on elsewhere on TV) to commit some time to finishing up a few things for my final Devember day.&lt;/li&gt;
+&lt;li&gt;Stats for today: 1 commit, 1 branch, 6h 1m 54s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 30</title>
+      <link>http://gary.mcad.am/articles/devember-30/</link>
+      <pubDate>Thu, 31 Dec 2015 05:06:56 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-30/</guid>
+      <author></author>
+      <description>&lt;p&gt;With the prototype working, today was spent performing a bit of testing&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; with my first user, my 2 year old daughter, Arya.&lt;/p&gt;
+&lt;p&gt;She was excited to use the app when I pointed it out to her on the home screen, and the user interface was intuitive enough (albeit slow &amp;ndash; again, I’ll come back to this later) that she was navigating around and watching her favourite YouTube videos&lt;sup&gt;[1]&lt;/sup&gt; in no time.&lt;/p&gt;
+&lt;p&gt;We discovered a few bugs and I’ve fixed those tonight.&lt;/p&gt;
+&lt;p&gt;With the bugs squashed, it was time to work on adding some customisation of the playlist items.&lt;/p&gt;
+&lt;h2 id=&quot;bing-api-is-surprisingly-good-and-the-php-league-prove-to-be-invaluable-again-&quot;&gt;Bing API is surprisingly good and the PHP League prove to be invaluable again!&lt;/h2&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-30/notbad.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I integrated with Bing’s Image Search API and the &lt;a href=&quot;https://github.com/thephpleague/color-extractor&quot;&gt;PHP League’s Color Extractor library&lt;/a&gt;. This means that all the parent does is choose an image related to the name of the playlist, and Bloon will fetch it, extract some colour information and show this on the interface to the child user.&lt;/p&gt;
+&lt;p&gt;This was very easy to set up, and while it needs a bit of tweaking, I’m very happy with the results!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-cap&quot;&gt;
+    &lt;img src=&quot;/articles/devember-30/playlist.png&quot; alt=&quot;&quot;&gt;
+    &lt;em&gt;The border and bubble colours shown here are extracted dynamically from the source image shown inside the bubble&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;  &lt;sup&gt;1. It’s worth noting just how great it was to have my daughter be able to browse her favourite YouTube videos with complete restriction, knowing she would only get to the ones I had set up. Not only that, but the feeling of having conceived this idea and been able to deliver it in ~30 days, was a great one.&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 4 commits, 1 tag , time spent 4h 44m 48s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 29</title>
+      <link>http://gary.mcad.am/articles/devember-29/</link>
+      <pubDate>Wed, 30 Dec 2015 04:05:37 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-29/</guid>
+      <author></author>
+      <description>&lt;p&gt;Right on time!&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; My prototype is basically done.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-29/IMG_2268.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;OK so it’s very early stages, and there’s a few features that got jettisoned on the way &amp;ndash; but we’re there, effectively.&lt;/p&gt;
+&lt;p&gt;I’ve got 2 more #Devember days to polish some things and maybe work on the authentication/API side. Right now my API is basically one large &lt;code&gt;routes.php&lt;/code&gt; file with everything hacked into it. But it’s functioning well enough to serve the app right now.&lt;/p&gt;
+&lt;p&gt;Anyway, I’ve been setting up some playlists for my daughter to have a look at tomorrow morning when she wakes up, when I’ll start some end user testing! :D&lt;/p&gt;
+&lt;p&gt;I’ll know a lot more about the app tomorrow, and I’ll have &lt;a href=&quot;https://trello.com/b/E0sJf6x3/bloon-devember&quot;&gt;a longer list of bugs&lt;/a&gt;, I suspect.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-29/fly.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS web apps are bullshit. More on this in my summary in the New Year. &lt;/li&gt;
+&lt;li&gt;Stats for today: 3 commits, 1 tag (yay!), time spent 2h 52m 25s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 28</title>
+      <link>http://gary.mcad.am/articles/devember-28/</link>
+      <pubDate>Tue, 29 Dec 2015 05:40:41 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-28/</guid>
+      <author></author>
+      <description>&lt;p&gt;Final stretch.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We now have a simple interface to the YouTube search API. Which, as it happens, is horrendously slow! I’m not going to worry too much about the performance for now, but it’s going to be immediately impossible to use, so I need to look into how I can make this more efficient.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-28/mobile.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The UI needs working on, and it needs to be hooked up to the playlist management API, but it’s getting there.&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+&lt;img src=&quot;/articles/devember-28/search.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Once we have a way to add and remove videos, playlists and profiles, the only things left are to do with authentication.&lt;/p&gt;
+&lt;p&gt;My goal now is to simply get the prototype of this working locally, and so authentication will be the last thing (probably after the new year and after Devember entirely.)&lt;/p&gt;
+&lt;p&gt;I probably have another 4-8 hours of solid work left until I have a working version. Just 3 more days left!&lt;/p&gt;
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 5h 25m 21s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 27</title>
+      <link>http://gary.mcad.am/articles/devember-27/</link>
+      <pubDate>Mon, 28 Dec 2015 04:59:49 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-27/</guid>
+      <author></author>
+      <description>&lt;p&gt;Productive evening. &lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Very tired. Going to bed!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+&lt;img src=&quot;/articles/devember-27/sleep.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;React is surprisingly good at updating the DOM based on state changes due to hundreds of mouse move events, really impressed!&lt;/li&gt;
+&lt;li&gt;Stats for today: 2 commits, time spent 1h 49m 35s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 26</title>
+      <link>http://gary.mcad.am/articles/devember-26/</link>
+      <pubDate>Sun, 27 Dec 2015 04:41:15 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-26/</guid>
+      <author></author>
+      <description>&lt;p&gt;Grunt grunt! &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The area I’m working on now, basically filling out the parents section and adding forms to all of my models, is brute work. And I find that it needs long, extended periods of time.&lt;/p&gt;
+&lt;p&gt;Sometimes, cutting yourself off with an arbitrary time limit of 1-2 hours can prove to be counter-intuitive, as it has the penalty of having to get back on track in your next session.&lt;/p&gt;
+&lt;p&gt;Everything is moving forward, slowly, but I’m planning to try and commit a good chunk of time, 4-8 hours, when I have more free time to really get some of the brute work out of the way.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+&lt;img src=&quot;/articles/devember-26/grunt.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
+&lt;p&gt;I also wrote a little experiment in React to &lt;a href=&quot;http://codepen.io/gpmcadam/pen/RrGYjR&quot;&gt;show a set of traffic lights.&lt;/a&gt; No real reason.&lt;/p&gt;
+&lt;p&gt;&lt;p data-height=&quot;541&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;RrGYjR&quot; data-default-tab=&quot;result&quot; data-user=&quot;gpmcadam&quot; class='codepen'&gt;See the Pen &lt;a href='http://codepen.io/gpmcadam/pen/RrGYjR/'&gt;ReactJS and CSS Traffic Lights&lt;/a&gt; by Gary McAdam (&lt;a href='http://codepen.io/gpmcadam'&gt;@gpmcadam&lt;/a&gt;) on &lt;a href='http://codepen.io'&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent 1h 49m 35s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 25</title>
+      <link>http://gary.mcad.am/articles/devember-25/</link>
+      <pubDate>Sat, 26 Dec 2015 00:41:15 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-25/</guid>
+      <author></author>
+      <description>&lt;p&gt;*&lt;em&gt;bangs head on table&lt;/em&gt;*.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I’ve just been fighting with small bits and pieces this evening, and getting distracted with browsing StackOverflow and chatting on the reactjs IRC channel.&lt;/p&gt;
+&lt;p&gt;Anyway, since it’s Christmas day, I haven’t had alot of opportunity. Unfortunately, after an hour and a half of programming my code isn’t running and I don’t have the patience to find out why, so I’m heading to bed. Will fix tomorrow.&lt;/p&gt;
+&lt;p&gt;Merry Christmas, everyone! :)&lt;/p&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+&lt;img src=&quot;/articles/devember-25/elf.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent 1h 29m 17s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 24</title>
+      <link>http://gary.mcad.am/articles/devember-24/</link>
+      <pubDate>Fri, 25 Dec 2015 01:37:09 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-24/</guid>
+      <author></author>
+      <description>&lt;p&gt;I pass.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I’ve spent all evening putting together Christmas gifts. My hands and brain are tired, so I’m going to sleep. Sorry!&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-24/ikea.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 0 commits, time spent (preparing for Christmas): ~12h&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 23</title>
+      <link>http://gary.mcad.am/articles/devember-23/</link>
+      <pubDate>Wed, 23 Dec 2015 23:30:02 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-23/</guid>
+      <author></author>
+      <description>&lt;p&gt;Hallway testing today.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; I managed to complete a simple version of the add profile form, and I brought with it some bad habits from my understanding of web forms.&lt;/p&gt;
+&lt;p&gt;After a brief chat with my (patient) wife regarding what &lt;em&gt;her&lt;/em&gt; expectations and opions on how the form might behave, I learned a few things which I think will postivively impact the design of the admin seciton.&lt;/p&gt;
+&lt;p&gt;Just a 5 minute chat while demoing the functionality has probably saved some later frustration, and shows the value of hallway testing.&lt;/p&gt;
+&lt;p&gt;Otherwise, very tired. Going to bed.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-md&quot;&gt;
+    &lt;img src=&quot;/articles/devember-23/data.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent: 1h 29m 13s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Devember Day 22</title>
+      <link>http://gary.mcad.am/articles/devember-22/</link>
+      <pubDate>Wed, 23 Dec 2015 01:42:16 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-22/</guid>
+      <author></author>
+      <description>&lt;p&gt;Fun fun fun.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt; Slow evening. Spent most of the day doing some last minute Christmas shopping, and then spent some time just focusing on some of the smaller things to do with the UI.&lt;/p&gt;
+&lt;p&gt;I’m &amp;ndash; strangely &amp;ndash; enjoying splitting out some of my requirements into sub-components. There’s a danger of abstracting too much, I suppose (mostly in terms of consuming time versus delivering the prototype.) It’s probably going to be Saturday/Sunday before I begin focusing some larger blocks of time per night to get this ready. But it’s coming together.&lt;/p&gt;
+&lt;p&gt;Also, today was my last day in work until the new year. So … yay.&lt;/p&gt;
+&lt;div class=&quot;img-responsive img-lg&quot;&gt;
+    &lt;img src=&quot;/articles/devember-22/yay.gif&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;today-s-observations&quot;&gt;Today’s Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats for today: 1 commit, time spent: 1h 39m 49s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 21</title>
       <link>http://gary.mcad.am/articles/devember-21/</link>
