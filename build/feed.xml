@@ -5,9 +5,143 @@
     <atom:link href="http://gary.mcad.am/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://gary.mcad.am</link>
     <description>I paid for this domain, I might as well use it!</description>
-    <pubDate>Fri, 01 Jan 2016 03:12:51 +0000</pubDate>
+    <pubDate>Fri, 01 Jan 2016 22:58:41 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>My #Devember journey, thoughts on React and more</title>
+      <link>http://gary.mcad.am/articles/devember-summary/</link>
+      <pubDate>Fri, 01 Jan 2016 22:58:41 +0000</pubDate>
+      <guid isPermaLink="true">http://gary.mcad.am/articles/devember-summary/</guid>
+      <author></author>
+      <description>&lt;p&gt;Yesterday I finished #Devember &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;, &lt;a href=&quot;http://gary.mcad.am/articles/devember&quot;&gt;a programming challenge&lt;/a&gt; to code for at least an hour, every night, for 31 days. And to write a blog about it each night.&lt;/p&gt;
+&lt;div class=&quot;img-cap&quot; style=&quot;margin: 1em;&quot;&gt;
+    &lt;iframe style=&quot;display: block; margin: 1em auto;&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9DCdCoQ49u8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;em&gt;This is my #Devember&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I succeeded (to some degree; there were some nights I couldn’t commit to fully) and came out on the this side of the month with a working prototype for an app called Bloon, a child-friendly YouTube player.&lt;/p&gt;
+&lt;p&gt;I chose to write the app using React, something which I had no previous experience with. Here’s my summary of #Devember, React, other technologies I encountered along the way &amp;ndash; and what’s next for Bloon, devblogging and my projects in general.&lt;/p&gt;
+&lt;h2 id=&quot;devember&quot;&gt;Devember&lt;/h2&gt;
+&lt;p&gt;I touched on it in the &lt;a href=&quot;http://gary.mcad.am/articles/devember-31&quot;&gt;previous post&lt;/a&gt;, but I’ll reiterate it: #Devember was massively rewarding. The idea isn’t new or exclusive to the month of December. Also my day job &lt;em&gt;is&lt;/em&gt; programming, so the idea of writing code pretty much daily isn’t the revolutionary aspect &amp;ndash; although it’s worth noting that it’s difficult to find time and energy to write code &lt;em&gt;every single day&lt;/em&gt; including weekends, especially with other commitments. And on at least two occasions, I wasn’t able to write a line of code.&lt;/p&gt;
+&lt;p&gt;The biggest thing&lt;sup&gt;[1]&lt;/sup&gt; that kept me going was the idea devblogging in general, something I hadn’t done before. Even though I knew it was without an audience, there’s still a level of commitment, you don’t want to stop posting after you’ve publicly vowed to do an hour a day at least.&lt;/p&gt;
+&lt;p&gt;And for that reason, I found a new way to avoid procrastination. This is also helped by only coding in short bursts and of course being able to work on something you thought up, and so your motivation is still pretty high. But still, on those days when you’re extra tired, maybe a little drunk or otherwise distracted, you still have to write that blog post. And you still have to make a commit. So, yeah, some days are not as productive and the quality of the code isn’t as good, but still, you make a commit.&lt;/p&gt;
+&lt;p&gt;Blogging every night also keeps you focused and helps you plan your next step &amp;ndash; similar to the benefits of standup meetings. Or in my case, decide what you’re going to drop because you realise there isn’t enough time. And some features &lt;em&gt;did&lt;/em&gt; get jettisoned part-way though, but I was able to deliver the prototype I wanted to from day one, more-or-less.&lt;/p&gt;
+&lt;p&gt;Here’s some stats from my journey:&lt;/p&gt;
+&lt;h3 id=&quot;github-commit-chart&quot;&gt;GitHub Commit Chart&lt;/h3&gt;
+&lt;div class=&quot;img-responsive&quot;&gt;
+&lt;img src=&quot;/articles/devember-summary/github-contrib.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;time-logged-in-december-minutes-&quot;&gt;Time Logged in December (minutes)&lt;/h3&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js&quot;&gt;&lt;/script&gt;
+&lt;canvas id=&quot;chart-time-logged&quot; width=&quot;960&quot; style=&quot;max-width: 100%; height: 200px; min-height: 100px;&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+    var rawData = [{&quot;id&quot;:1,&quot;note&quot;:&quot;document coding&quot;,&quot;start&quot;:&quot;2015-12-01 20:23:52 +0000&quot;,&quot;end&quot;:&quot;2015-12-01 20:24:05 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:2,&quot;note&quot;:&quot;setup&quot;,&quot;start&quot;:&quot;2015-12-01 20:24:11 +0000&quot;,&quot;end&quot;:&quot;2015-12-01 20:31:33 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:3,&quot;note&quot;:&quot;setup&quot;,&quot;start&quot;:&quot;2015-12-01 22:00:33 +0000&quot;,&quot;end&quot;:&quot;2015-12-01 22:58:10 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:4,&quot;note&quot;:&quot;setup&quot;,&quot;start&quot;:&quot;2015-12-02 21:49:36 +0000&quot;,&quot;end&quot;:&quot;2015-12-03 01:49:37 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:5,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-03 22:35:49 +0000&quot;,&quot;end&quot;:&quot;2015-12-03 23:43:17 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:6,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-05 00:23:33 +0000&quot;,&quot;end&quot;:&quot;2015-12-05 00:31:57 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:7,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-05 00:45:07 +0000&quot;,&quot;end&quot;:&quot;2015-12-05 03:34:01 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:8,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-06 02:23:02 +0000&quot;,&quot;end&quot;:&quot;2015-12-06 03:11:30 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:9,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-07 00:16:30 +0000&quot;,&quot;end&quot;:&quot;2015-12-07 01:37:01 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:10,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-07 23:17:14 +0000&quot;,&quot;end&quot;:&quot;2015-12-08 00:54:46 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:11,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-08 23:34:24 +0000&quot;,&quot;end&quot;:&quot;2015-12-09 01:30:57 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:12,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-09 23:14:16 +0000&quot;,&quot;end&quot;:&quot;2015-12-10 00:44:18 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:13,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-11 01:42:25 +0000&quot;,&quot;end&quot;:&quot;2015-12-11 03:12:24 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:14,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-12 23:51:05 +0000&quot;,&quot;end&quot;:&quot;2015-12-13 02:37:03 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:15,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-13 22:39:51 +0000&quot;,&quot;end&quot;:&quot;2015-12-14 00:56:27 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:16,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-14 23:09:05 +0000&quot;,&quot;end&quot;:&quot;2015-12-15 01:17:34 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:17,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-15 23:26:38 +0000&quot;,&quot;end&quot;:&quot;2015-12-15 23:53:58 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:18,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-16 21:22:53 +0000&quot;,&quot;end&quot;:&quot;2015-12-16 22:43:18 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:19,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-16 23:23:38 +0000&quot;,&quot;end&quot;:&quot;2015-12-17 00:42:16 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:20,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-17 21:41:42 +0000&quot;,&quot;end&quot;:&quot;2015-12-18 00:06:14 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:21,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-19 01:13:12 +0000&quot;,&quot;end&quot;:&quot;2015-12-19 02:17:22 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:22,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-20 10:50:17 +0000&quot;,&quot;end&quot;:&quot;2015-12-20 12:25:05 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:23,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-20 16:13:28 +0000&quot;,&quot;end&quot;:&quot;2015-12-20 18:55:34 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:24,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-20 22:56:11 +0000&quot;,&quot;end&quot;:&quot;2015-12-20 23:41:56 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:25,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-22 00:06:27 +0000&quot;,&quot;end&quot;:&quot;2015-12-22 01:00:04 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:27,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-23 00:06:00 +0000&quot;,&quot;end&quot;:&quot;2015-12-23 01:45:49 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:28,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-23 15:24:15 +0000&quot;,&quot;end&quot;:&quot;2015-12-23 16:08:46 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:29,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-23 22:44:30 +0000&quot;,&quot;end&quot;:&quot;2015-12-23 23:29:22 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:33,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-25 23:11:29 +0000&quot;,&quot;end&quot;:&quot;2015-12-26 00:40:46 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:34,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-26 23:20:48 +0000&quot;,&quot;end&quot;:&quot;2015-12-27 01:10:23 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:35,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-28 01:13:10 +0000&quot;,&quot;end&quot;:&quot;2015-12-28 02:37:44 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:36,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-29 00:16:23 +0000&quot;,&quot;end&quot;:&quot;2015-12-29 05:40:44 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:37,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-30 01:12:06 +0000&quot;,&quot;end&quot;:&quot;2015-12-30 04:04:31 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:38,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-31 00:31:07 +0000&quot;,&quot;end&quot;:&quot;2015-12-31 05:15:55 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;},{&quot;id&quot;:39,&quot;note&quot;:&quot;&quot;,&quot;start&quot;:&quot;2015-12-31 22:54:40 +0000&quot;,&quot;end&quot;:&quot;2016-01-01 00:11:46 +0000&quot;,&quot;sheet&quot;:&quot;bloon&quot;}],
+        data = {
+            labels: [&quot;2015-12-01&quot;,&quot;2015-12-02&quot;,&quot;2015-12-03&quot;,&quot;2015-12-04&quot;,&quot;2015-12-05&quot;,&quot;2015-12-06&quot;,&quot;2015-12-07&quot;,&quot;2015-12-08&quot;,&quot;2015-12-09&quot;,&quot;2015-12-10&quot;,&quot;2015-12-11&quot;,&quot;2015-12-12&quot;,&quot;2015-12-13&quot;,&quot;2015-12-14&quot;,&quot;2015-12-15&quot;,&quot;2015-12-16&quot;,&quot;2015-12-17&quot;,&quot;2015-12-18&quot;,&quot;2015-12-19&quot;,&quot;2015-12-20&quot;,&quot;2015-12-21&quot;,&quot;2015-12-22&quot;,&quot;2015-12-23&quot;,&quot;2015-12-24&quot;,&quot;2015-12-25&quot;,&quot;2015-12-26&quot;,&quot;2015-12-27&quot;,&quot;2015-12-28&quot;,&quot;2015-12-29&quot;,&quot;2015-12-30&quot;,&quot;2015-12-31&quot;],
+            datasets: [{
+                label: &quot;Time Logged (mins)&quot;,
+                fillColor: &quot;rgba(151,187,205,0.2)&quot;,
+                strokeColor: &quot;rgba(151,187,205,1)&quot;,
+                pointColor: &quot;rgba(151,187,205,1)&quot;,
+                pointStrokeColor: &quot;#fff&quot;,
+                pointHighlightFill: &quot;#fff&quot;,
+                pointHighlightStroke: &quot;rgba(151,187,205,1)&quot;,
+                data: []
+            }]
+        };
+    var totalTime = 0;
+    _.each(data.labels, function(label) {
+        var labelDate = moment(label),
+            labelTime = 0;
+        _.each(rawData, function(item) {
+            var start = moment(item.start),
+                end = moment(item.end),
+                diff = end.diff(start, 'minutes');
+            if (start.isSame(labelDate, 'd')) {
+                labelTime += diff;
+                totalTime += diff;
+            }
+        });
+        data.datasets[0].data.push(labelTime);
+    });
+    Chart.types.Line.extend({
+        name: &quot;LineAlt&quot;,
+        initialize: function(data){
+            Chart.types.Line.prototype.initialize.apply(this, arguments);
+            var xLabels = this.scale.xLabels;
+            for (var i = 0; i &lt; xLabels.length; i++)
+                xLabels[i] = moment(xLabels[i]).format('ddd Do');
+        }
+    });
+    new Chart(document.getElementById('chart-time-logged').getContext(&quot;2d&quot;)).LineAlt(data, {
+        scaleShowLabels: false,
+        scaleShowGridLines : true,
+        scaleGridLineColor : &quot;rgba(0,0,0,.05)&quot;,
+        scaleGridLineWidth : 1,
+        scaleShowHorizontalLines: false,
+        scaleShowVerticalLines: false,
+        bezierCurve : true,
+        bezierCurveTension : 0.5,
+        pointDot : false,
+        datasetStroke : true,
+        datasetStrokeWidth : 1,
+        datasetFill : true
+    });
+&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Total time spent: &lt;script&gt;document.write((totalTime/60).toFixed(2))&lt;/script&gt;&lt;noscript&gt;59.48&lt;/noscript&gt; hrs&lt;/li&gt;
+&lt;li&gt;Avg. time spent per day: &lt;script&gt;document.write(((totalTime/60)/31).toFixed(2))&lt;/script&gt;&lt;noscript&gt;1.92&lt;/noscript&gt; hrs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;sup&gt;1. The other big motivating factor was watching my commit streak on GitHub grow, however I was only really able to achieve a 13-day maximum streak in the entire period, simply because I would go 24 hours without coding in some cases (committing my work at 2am the next morning, on most&amp;ndash;but not all&amp;ndash; nights)&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&quot;individual-technology-thoughts&quot;&gt;Individual Technology Thoughts&lt;/h2&gt;
+&lt;h3 id=&quot;gulp-vs-grunt&quot;&gt;Gulp vs Grunt&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I use Grunt in my day job, but Gulp was chosen for this project&lt;/li&gt;
+&lt;li&gt;Gulp seems faster, but Grunt fits my workflow more &amp;ndash; will probably go with Gulp and seek tools that meet my workflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;lumen-laravel&quot;&gt;Lumen/Laravel&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lumen is pointless for me, Laravel is superior &amp;ndash; even as a microframework &amp;ndash; however I should have used a much lighter framework for knocking up APIs than what I went with (maybe something Node based)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;react&quot;&gt;React&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;No previous experience with React, and my first week was spent banging my head against the desk trying to understand React, the tutorials and documentation, the community suggestions, Flux (and associated frameworks) and other topics.&lt;/li&gt;
+&lt;li&gt;However, I’m &lt;em&gt;so&lt;/em&gt; glad to have found it, will explore it in more detail on other projects I hope &amp;ndash; next up: React Native&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;react-bootstrap&quot;&gt;React-Bootstrap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Huge time saver, can’t wait for it to update to Bootstrap 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;sass-vs-less&quot;&gt;Sass vs Less&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Again, I use Less in my day job but chose Sass for this project&lt;/li&gt;
+&lt;li&gt;Not that much difference for me, similar features available in both. Would be happy to use either, although do prefer syntax of LESS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;browserify-and-es6&quot;&gt;Browserify and ES6&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Browserify is great and I’m glad to get some experience in ES6&lt;/li&gt;
+&lt;li&gt;Love the ES6 features and hope I can keep on using them in other projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;safari-mobile-web-apps&quot;&gt;Safari Mobile Web Apps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Not worth bothering with! Too slow, too restrictive and not customisable enough - native apps are the clear winners and Apple clearly wants to keep it this way&lt;/li&gt;
+&lt;li&gt;With that said I was able to launch a working prototype in ~&lt;script&gt;document.write((totalTime/60).toFixed())&lt;/script&gt;&lt;noscript&gt;59&lt;/noscript&gt; hours, which can be useful, especially for the purpose of designing the API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-s-next-&quot;&gt;What’s Next?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For Bloon, a native (or hybrid) app. Will look at making the API quicker and making some smaller changes to the front-end for the short term&lt;/li&gt;
+&lt;li&gt;The ultimate goal is to release the app to market by June/July&lt;/li&gt;
+&lt;li&gt;Will I continue to code an extra 1 hour (or more) per day? Maybe on average, but I won’t be forcing myself to a daily commitment like I have been. However, I will try and do 1 devblog per week to keep my motivation up.&lt;/li&gt;
+&lt;li&gt;One thing’s for sure, I’ll be keeping up with ES6+Browserify+React as that is the most existing thing to come out of this entire thing for me.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Devember Day 31</title>
       <link>http://gary.mcad.am/articles/devember-31/</link>
